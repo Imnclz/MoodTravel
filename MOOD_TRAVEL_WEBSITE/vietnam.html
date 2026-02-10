@@ -1,0 +1,2802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnam Travel Packages - MOOD Travel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Vietnam Hero Section */
+        .vietnam-hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/HV.jpg') center/cover no-repeat fixed;
+            padding-top: 80px;
+            padding-bottom: 70px;
+            text-align: center;
+        }
+
+        .vietnam-hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            color: var(--primary-white);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .vietnam-hero-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--primary-white);
+            margin-bottom: 30px;
+            opacity: 0.95;
+            animation: subtitleFadeIn 0.8s ease-out;
+        }
+
+        @keyframes subtitleFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 0.95;
+                transform: translateY(0);
+            }
+        }
+
+        .vietnam-hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 72px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+            color: var(--primary-white);
+            animation: titleFadeIn 1s ease-out 0.2s backwards;
+        }
+
+        @keyframes titleFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .vietnam-hero-description {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--primary-white);
+            margin-bottom: 40px;
+            line-height: 1.6;
+            opacity: 0.9;
+            animation: descriptionFadeIn 1s ease-out 0.4s backwards;
+        }
+
+        @keyframes descriptionFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 0.9;
+                transform: translateY(0);
+            }
+        }
+
+        .vietnam-buttons {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            animation: buttonsFadeIn 1s ease-out 0.6s backwards;
+            position: relative;
+            z-index: 20;
+        }
+
+        @keyframes buttonsFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .vietnam-btn-primary {
+            background-color: var(--primary-red);
+            color: var(--primary-white);
+            padding: 16px 50px;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 15px 40px rgba(255, 45, 45, 0.4);
+        }
+
+        .vietnam-btn-primary:hover {
+            background-color: #E91E1E;
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(255, 45, 45, 0.6);
+        }
+
+        .vietnam-btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            color: var(--primary-white);
+            padding: 14px 45px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px 0 rgba(255, 45, 45, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .vietnam-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(255, 255, 255, 0.3), inset 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Value Proposition Section */
+        .vietnam-value-section {
+            padding: 80px 40px;
+            background-color: var(--primary-white);
+            background-image: url('images/BG.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .vietnam-value-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .vietnam-value-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .vietnam-value-image-wrapper {
+            position: relative;
+        }
+
+        .vietnam-value-image {
+            width: 100%;
+            height: auto;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            object-fit: cover;
+            display: block;
+        }
+
+        .vietnam-trust-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--primary-white);
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+            max-width: 280px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            animation: badgeSlideIn 1s ease-out 0.5s backwards;
+        }
+
+        @keyframes badgeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px) translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        .vietnam-badge-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #FF6B6B 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-white);
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .vietnam-badge-text {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .vietnam-badge-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .vietnam-badge-description {
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .vietnam-value-content {
+            animation: contentFadeIn 1s ease-out 0.3s backwards;
+        }
+
+        @keyframes contentFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .vietnam-value-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+        }
+
+        .vietnam-value-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+        }
+
+        .vietnam-value-subtext {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 50px;
+            max-width: 550px;
+        }
+
+        .vietnam-features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
+
+        .vietnam-feature-item {
+            display: flex;
+            gap: 16px;
+        }
+
+        .vietnam-feature-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(255, 45, 45, 0.1) 0%, rgba(255, 107, 107, 0.08) 100%);
+            border: 2px solid rgba(255, 45, 45, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: var(--primary-red);
+        }
+
+        .vietnam-feature-content {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .vietnam-feature-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .vietnam-feature-description {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* What Makes Vietnam Different Section - Comparison Table */
+        .vietnam-different-section {
+            padding: 90px 40px;
+            background-color: #f8f8f8;
+        }
+
+        .vietnam-different-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .vietnam-different-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .vietnam-different-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+        }
+
+        .vietnam-different-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 52px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 25px;
+        }
+
+        .vietnam-different-subtext {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Comparison Table Styles */
+        .vietnam-comparison-table-wrapper {
+            background: var(--primary-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-top: 60px;
+            animation: tableSlideIn 1s ease-out 0.2s backwards;
+        }
+
+        @keyframes tableSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .vietnam-comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .vietnam-comparison-table thead {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #FF6B6B 100%);
+        }
+
+        .vietnam-comparison-table th {
+            padding: 18px 14px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary-white);
+            letter-spacing: 0.5px;
+        }
+
+        .vietnam-comparison-table th:first-child {
+            text-align: left;
+            background: #f5f5f5;
+            color: var(--text-dark);
+        }
+
+        .vietnam-comparison-table tbody tr {
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .vietnam-comparison-table tbody tr:hover {
+            background-color: #faf5f5;
+        }
+
+        .vietnam-comparison-table td {
+            padding: 14px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .vietnam-comparison-table td:first-child {
+            text-align: left;
+            color: var(--text-dark);
+            font-weight: 600;
+            background-color: #fafafa;
+        }
+
+        .vietnam-comparison-check {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .vietnam-comparison-check.yes {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(76, 175, 80, 0.05) 100%);
+            color: #4CAF50;
+        }
+
+        .vietnam-comparison-check.no {
+            background: linear-gradient(135deg, rgba(244, 67, 54, 0.1) 0%, rgba(244, 67, 54, 0.05) 100%);
+            color: #F44336;
+        }
+
+        .vietnam-comparison-note {
+            padding: 14px;
+            background-color: var(--primary-white);
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* Grid fallback for old cards (if needed) */
+        .vietnam-different-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .vietnam-different-card {
+            background: var(--primary-white);
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: cardFadeIn 1s ease-out backwards;
+        }
+
+        .vietnam-different-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .vietnam-different-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .vietnam-different-description {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+                                   /* AKUUUUUUU STOPPPPPPPPPPPPPPPP SINIIIIIIIIIIIIIIIIIIII*/
+        /* Popular Packages Section */
+        .vietnam-packages-section {
+            padding: 90px 40px;
+            background-color: var(--primary-white);
+        }
+
+        .vietnam-packages-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .vietnam-packages-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 70px;
+            gap: 40px;
+        }
+
+        .vietnam-packages-header-left {
+            flex: 1;
+        }
+
+        .vietnam-packages-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+        }
+
+        .vietnam-packages-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+        }
+
+        .vietnam-packages-subtext {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .vietnam-packages-header-right {
+            flex-shrink: 0;
+        }
+
+        .vietnam-view-all-link {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--primary-red);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            letter-spacing: 0.5px;
+        }
+
+        .vietnam-view-all-link:hover {
+            transform: translateX(5px);
+        }
+
+        .vietnam-packages-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 22px;
+            grid-template-rows: auto auto;
+        }
+
+        .vietnam-package-card {
+            position: relative;
+            height: 380px;
+            border-radius: 24px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .vietnam-package-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .vietnam-package-card.large {
+            grid-row: span 2;
+            height: auto;
+            min-height: 430px;
+        }
+
+        .vietnam-package-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .vietnam-package-card:hover .vietnam-package-image {
+            transform: scale(1.05);
+        }
+
+        .vietnam-package-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 22px;
+            color: var(--primary-white);
+        }
+
+        .vietnam-package-badge {
+            align-self: flex-start;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #FF6B6B 100%);
+            color: var(--primary-white);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            box-shadow: 0 8px 20px rgba(255, 45, 45, 0.3);
+        }
+
+        .vietnam-package-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .vietnam-package-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-white);
+            letter-spacing: -0.5px;
+        }
+
+        .vietnam-package-large .vietnam-package-title {
+            font-size: 28px;
+        }
+
+        .vietnam-package-route {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            letter-spacing: 0.5px;
+        }
+
+        .vietnam-package-duration {
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .vietnam-package-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .vietnam-package-price {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary-white);
+        }
+
+        .vietnam-package-customize-btn {
+            background-color: var(--primary-white);
+            color: var(--primary-red);
+            border: none;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+        }
+
+        /* De-emphasized package cards */
+        .vietnam-package-card.minor {
+            height: 240px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+            opacity: 0.88;
+        }
+
+        .vietnam-package-card.minor:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+        }
+
+        .vietnam-package-card.minor .vietnam-package-overlay {
+            padding: 14px;
+        }
+
+        .vietnam-package-card.minor .vietnam-package-badge {
+            padding: 3px 9px;
+            font-size: 8px;
+        }
+
+        .vietnam-package-card.minor .vietnam-package-title {
+            font-size: 16px;
+        }
+
+        .vietnam-package-card.minor .vietnam-package-route {
+            font-size: 10px;
+        }
+
+        .vietnam-package-card.minor .vietnam-package-duration {
+            font-size: 9px;
+        }
+
+        .vietnam-package-card.minor .vietnam-package-price {
+            font-size: 11px;
+        }
+
+        .vietnam-package-card.minor .vietnam-package-customize-btn {
+            padding: 5px 12px;
+            font-size: 8px;
+        }
+
+        .vietnam-package-customize-btn:hover {
+            background-color: var(--primary-red);
+            color: var(--primary-white);
+            transform: scale(1.05);
+        }
+
+        /* Destinations Exploration Section */
+        .vietnam-destinations-section {
+            padding: 90px 40px;
+            background-color: var(--primary-white);
+        }
+
+        .vietnam-destinations-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .vietnam-destination-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .vietnam-destination-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .vietnam-destination-row.reverse {
+            direction: rtl;
+        }
+
+        .vietnam-destination-row.reverse > * {
+            direction: ltr;
+        }
+
+        .vietnam-destination-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            animation: imageFadeIn 1s ease-out backwards;
+        }
+
+        .vietnam-destination-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .vietnam-destination-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .vietnam-destination-content {
+            animation: contentFadeIn 1s ease-out 0.2s backwards;
+        }
+
+        .vietnam-destination-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .vietnam-destination-divider {
+            width: 50px;
+            height: 3px;
+            background: var(--primary-red);
+            margin-bottom: 25px;
+        }
+
+        .vietnam-destination-description {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .vietnam-destination-btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--text-dark);
+            padding: 14px 40px;
+            border: 2px solid var(--text-dark);
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+        }
+
+        .vietnam-destination-btn:hover {
+            background-color: var(--text-dark);
+            color: var(--primary-white);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Full Trip Details Section */
+        .vietnam-itinerary-section {
+            padding: 90px 40px;
+            background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+        }
+
+        .vietnam-itinerary-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .vietnam-itinerary-header h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .vietnam-itinerary-header p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .vietnam-itinerary-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        /* Timeline Style */
+        .vietnam-timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 3px solid #e0e0e0;
+        }
+
+        .vietnam-timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .vietnam-timeline-dot {
+            position: absolute;
+            left: -47px;
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #FF6B6B 100%);
+            color: var(--primary-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(255, 45, 45, 0.3);
+        }
+
+        .vietnam-timeline-content h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .vietnam-timeline-content p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .vietnam-meal-tag {
+            display: inline-block;
+            background: rgba(255, 45, 45, 0.08);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary-red);
+            border: 1px solid rgba(255, 45, 45, 0.15);
+        }
+
+        .vietnam-info-stack {
+            display: grid;
+            gap: 20px;
+        }
+
+        .vietnam-info-card {
+            background: var(--primary-white);
+            border-radius: 16px;
+            padding: 22px;
+            border: 1px solid #eee;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .vietnam-info-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 0 0 10px;
+        }
+
+        .vietnam-info-card p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .vietnam-map-card {
+            margin-top: 10px;
+            background: var(--primary-white);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid #eee;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .vietnam-map-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .vietnam-map-header h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        .vietnam-map-header span {
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .vietnam-map-svg {
+            width: 100%;
+            height: 140px;
+            display: block;
+        }
+
+        /* Inclusions Box */
+        .vietnam-inclusions-box {
+            background: var(--text-dark);
+            color: var(--primary-white);
+            padding: 40px;
+            border-radius: 20px;
+            position: sticky;
+            top: 120px;
+        }
+
+        .vietnam-inclusions-box h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .vietnam-inc-card {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .vietnam-inc-card i {
+            font-size: 28px;
+            color: var(--primary-red);
+            min-width: 28px;
+        }
+
+        .vietnam-inc-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .vietnam-inc-card p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        /* 6 Tempat Menarik Section */
+        .vietnam-attractions-section {
+            padding: 90px 40px;
+            background-color: var(--primary-white);
+        }
+
+        .vietnam-attractions-header {
+            margin-bottom: 60px;
+            text-align: left;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .vietnam-attractions-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-red);
+            margin-bottom: 12px;
+        }
+
+        .vietnam-attractions-header h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 0;
+            letter-spacing: -1px;
+        }
+
+        /* Attraction Gallery */
+        .vietnam-attraction-gallery {
+            display: flex;
+            gap: 20px;
+            padding: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+            background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+            border-radius: 30px;
+        }
+
+        .vietnam-attraction-gallery::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .vietnam-attraction-gallery::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .vietnam-attraction-gallery::-webkit-scrollbar-thumb {
+            background: #ddd;
+            border-radius: 4px;
+        }
+
+        .vietnam-attraction-box {
+            width: 280px;
+            height: 200px;
+            flex-shrink: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            cursor: grab;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .vietnam-attraction-box:active {
+            cursor: grabbing;
+        }
+
+        .vietnam-attraction-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .vietnam-attraction-box::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 2;
+        }
+
+        .vietnam-arrow-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--text-dark);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            opacity: 0;
+            transform: scale(0.5) rotate(-45deg);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 5;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .vietnam-attraction-box:hover {
+            transform: translateY(-15px) scale(1.08);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+        }
+
+        .vietnam-attraction-box:hover img {
+            transform: scale(1.15);
+        }
+
+        .vietnam-attraction-box:hover::before {
+            opacity: 1;
+        }
+
+        .vietnam-attraction-box:hover .vietnam-arrow-icon {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+
+        /* Attraction Modal */
+        .vietnam-attraction-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeInModal 0.4s ease;
+        }
+
+        @keyframes fadeInModal {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .vietnam-attraction-modal.active {
+            display: flex;
+        }
+
+        .vietnam-modal-content {
+            background: var(--primary-white);
+            border-radius: 24px;
+            overflow: hidden;
+            max-width: 800px;
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.3);
+            animation: slideUpModal 0.4s ease;
+        }
+
+        @keyframes slideUpModal {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .vietnam-modal-image {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .vietnam-modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .vietnam-modal-text {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .vietnam-modal-text h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .vietnam-modal-text p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .vietnam-modal-amenities {
+            margin-bottom: 25px;
+        }
+
+        .vietnam-amenity-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .vietnam-amenity-item i {
+            color: var(--primary-red);
+            font-size: 16px;
+            min-width: 16px;
+        }
+
+        .vietnam-modal-buttons {
+            display: flex;
+            gap: 15px;
+            flex-direction: column;
+        }
+
+        .vietnam-modal-cta-primary {
+            background-color: var(--primary-red);
+            color: var(--primary-white);
+            padding: 14px 24px;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 20px rgba(255, 45, 45, 0.3);
+        }
+
+        .vietnam-modal-cta-primary:hover {
+            background-color: #E91E1E;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 45, 45, 0.4);
+        }
+
+        .vietnam-modal-cta-secondary {
+            background: transparent;
+            color: var(--text-dark);
+            padding: 12px 24px;
+            border: 2px solid var(--text-dark);
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .vietnam-modal-cta-secondary:hover {
+            background-color: var(--text-dark);
+            color: var(--primary-white);
+            transform: translateY(-3px);
+        }
+
+        .vietnam-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 2001;
+            transition: 0.3s;
+        }
+
+        .vietnam-modal-close:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Moving Pictures Gallery Section */
+        .vietnam-gallery-section {
+            padding: 90px 40px;
+            background-color: #f8f8f8;
+        }
+
+        .vietnam-gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .vietnam-gallery-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 60px;
+            letter-spacing: -1px;
+        }
+
+        .vietnam-scroll-container {
+            display: flex;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .vietnam-scroll-track {
+            display: flex;
+            gap: 20px;
+            animation: scroll 30s linear infinite;
+        }
+
+        .vietnam-scroll-track img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .vietnam-scroll-track img:hover {
+            transform: scale(1.05);
+        }
+
+        .vietnam-scroll-track.track-to-left {
+            animation: scrollLeft 40s linear infinite;
+        }
+
+        .vietnam-scroll-track.track-to-right {
+            animation: scrollRight 40s linear infinite;
+        }
+
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Companies Section */
+        .vietnam-companies-section {
+            padding: 80px 40px;
+            background-color: var(--primary-white);
+            text-align: center;
+        }
+
+        .vietnam-companies-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .vietnam-companies-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .vietnam-companies-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 50px;
+        }
+
+        .vietnam-companies-image-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .vietnam-companies-image {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        /* FAQ Section */
+        .vietnam-faq-section {
+            padding: 90px 40px;
+            background-color: #f8f8f8;
+        }
+
+        .vietnam-faq-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .vietnam-faq-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .vietnam-faq-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+        }
+
+        .vietnam-faq-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 25px;
+        }
+
+        .vietnam-faq-subtext {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .vietnam-faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 60px;
+        }
+
+        .vietnam-faq-item {
+            background: var(--primary-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .vietnam-faq-item:hover {
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .vietnam-faq-question {
+            padding: 20px;
+            background-color: var(--primary-white);
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .vietnam-faq-question:hover {
+            background-color: #f5f5f5;
+        }
+
+        .vietnam-faq-question.active {
+            background-color: var(--primary-red);
+            color: var(--primary-white);
+        }
+
+        .vietnam-faq-toggle {
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .vietnam-faq-question.active .vietnam-faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .vietnam-faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: #fafafa;
+        }
+
+        .vietnam-faq-item.active .vietnam-faq-answer {
+            max-height: 300px;
+            padding: 20px;
+        }
+
+        .vietnam-faq-answer-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Ready to Go CTA Section */
+        .vietnam-cta-section {
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('images/FI.jpg') center/cover no-repeat;
+            background-attachment: fixed;
+        }
+
+        .vietnam-cta-container {
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+            z-index: 10;
+            position: relative;
+        }
+
+        .vietnam-cta-content {
+            animation: ctaContentFadeIn 1s ease-out 0.2s backwards;
+        }
+
+        @keyframes ctaContentFadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .vietnam-cta-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 44px;
+            font-weight: 800;
+            color: var(--primary-white);
+            line-height: 1.2;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+        }
+
+        .vietnam-cta-subtext {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+        }
+
+        .vietnam-cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            animation: buttonsSlideIn 1s ease-out 0.4s backwards;
+        }
+
+        @keyframes buttonsSlideIn {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .vietnam-cta-btn-primary {
+            background-color: var(--primary-red);
+            color: var(--primary-white);
+            padding: 18px 50px;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 15px 40px rgba(255, 45, 45, 0.4);
+        }
+
+        .vietnam-cta-btn-primary:hover {
+            background-color: #E91E1E;
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(255, 45, 45, 0.6);
+        }
+
+        .vietnam-cta-btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: var(--primary-white);
+            padding: 16px 50px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1), inset 0 0 20px rgba(255, 255, 255, 0.05);
+        }
+
+        .vietnam-cta-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(255, 255, 255, 0.2), inset 0 0 30px rgba(255, 255, 255, 0.1);
+        }
+
+        /* WhatsApp Support Box */
+        .vietnam-whatsapp-section {
+            padding: 50px 40px;
+            background-color: #faf5f5;
+            margin: 70px 40px;
+            border-radius: 24px;
+            text-align: center;
+            animation: supportFadeIn 1s ease-out 0.3s backwards;
+        }
+
+        @keyframes supportFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .vietnam-whatsapp-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+        }
+
+        .vietnam-whatsapp-btn {
+            display: inline-block;
+            background-color: var(--primary-red);
+            color: var(--primary-white);
+            padding: 16px 50px;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 12px 35px rgba(255, 45, 45, 0.3);
+            text-decoration: none;
+        }
+
+        .vietnam-whatsapp-btn:hover {
+            background-color: #E91E1E;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(255, 45, 45, 0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .vietnam-value-grid {
+                gap: 60px;
+            }
+            .vietnam-different-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .vietnam-packages-grid {
+                grid-template-columns: 1fr;
+            }
+            .vietnam-itinerary-container {
+                grid-template-columns: 1fr;
+            }
+            .vietnam-cta-container {
+                gap: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .vietnam-hero {
+                padding-bottom: 50px;
+            }
+            .vietnam-hero-title {
+                font-size: 44px;
+            }
+            .vietnam-hero-description {
+                font-size: 16px;
+            }
+            .vietnam-value-section {
+                padding: 60px 24px;
+            }
+            .vietnam-value-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            .vietnam-different-section {
+                padding: 60px 24px;
+            }
+            .vietnam-comparison-table th,
+            .vietnam-comparison-table td {
+                padding: 15px 10px;
+                font-size: 12px;
+            }
+            .vietnam-comparison-table th {
+                font-size: 14px;
+            }
+            .vietnam-comparison-check {
+                width: 25px;
+                height: 25px;
+                font-size: 16px;
+            }
+            .vietnam-different-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .vietnam-packages-section {
+                padding: 60px 24px;
+            }
+            .vietnam-destinations-section {
+                padding: 60px 24px;
+            }
+            .vietnam-itinerary-section {
+                padding: 60px 24px;
+            }
+            .vietnam-itinerary-container {
+                grid-template-columns: 1fr;
+            }
+            .vietnam-inclusions-box {
+                position: static;
+                margin-top: 40px;
+            }
+            .vietnam-attraction-gallery {
+                padding: 16px;
+                border-radius: 20px;
+            }
+            .vietnam-attraction-box {
+                width: 180px;
+                height: 130px;
+            }
+            .vietnam-attraction-title {
+                font-size: 14px;
+            }
+            .vietnam-attractions-section {
+                padding: 60px 24px;
+            }
+            .vietnam-info-card {
+                padding: 18px;
+            }
+            .vietnam-map-card {
+                padding: 16px;
+            }
+            .vietnam-map-header h4 {
+                font-size: 14px;
+            }
+            .vietnam-map-svg {
+                height: 120px;
+            }
+            .vietnam-gallery-section {
+                padding: 60px 24px;
+            }
+            .vietnam-companies-section {
+                padding: 60px 24px;
+            }
+            .vietnam-faq-section {
+                padding: 60px 24px;
+            }
+            .vietnam-cta-section {
+                height: auto;
+                padding: 60px 24px;
+            }
+            .vietnam-cta-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0;
+            }
+            .vietnam-whatsapp-section {
+                margin: 60px 20px;
+                padding: 40px 24px;
+            }
+            .vietnam-modal-content {
+                grid-template-columns: 1fr;
+                max-width: 520px;
+            }
+            .vietnam-modal-image {
+                height: 220px;
+            }
+            .vietnam-modal-text {
+                padding: 20px;
+            }
+            .vietnam-modal-text h3 {
+                font-size: 18px;
+            }
+            .vietnam-modal-text p {
+                font-size: 13px;
+            }
+            .vietnam-modal-cta-primary,
+            .vietnam-modal-cta-secondary {
+                padding: 12px 20px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .vietnam-hero-title {
+                font-size: 34px;
+            }
+            .vietnam-value-heading {
+                font-size: 26px;
+            }
+            .vietnam-different-heading {
+                font-size: 26px;
+            }
+            .vietnam-packages-heading {
+                font-size: 26px;
+            }
+            .vietnam-gallery-title {
+                font-size: 26px;
+            }
+            .vietnam-companies-title {
+                font-size: 26px;
+            }
+            .vietnam-faq-heading {
+                font-size: 26px;
+            }
+            .vietnam-cta-heading {
+                font-size: 24px;
+            }
+            .vietnam-itinerary-header h2 {
+                font-size: 26px;
+            }
+            .vietnam-attractions-header h2 {
+                font-size: 26px;
+            }
+            .vietnam-map-svg {
+                height: 110px;
+            }
+            .vietnam-hero-description,
+            .vietnam-different-subtext,
+            .vietnam-packages-subtext,
+            .vietnam-itinerary-header p,
+            .vietnam-attractions-header p,
+            .vietnam-faq-subtext {
+                font-size: 14px;
+            }
+            .vietnam-attraction-gallery {
+                padding: 12px;
+            }
+            .vietnam-attraction-box {
+                width: 160px;
+                height: 115px;
+            }
+            .vietnam-modal-content {
+                width: 92%;
+            }
+            .vietnam-modal-image {
+                height: 200px;
+            }
+        }
+    </style>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/CLNB2.png" alt="MOOD TRAVEL Logo" class="logo-img">
+            </div>
+            <div class="nav-menu-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html">Utama</a></li>
+                    <li><a href="packages.html">Pakej</a></li>
+                    <li><a href="pengalaman.html">Pengalaman</a></li>
+                    <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                    <li><a href="hubungi.html">Hubungi Kami</a></li>
+                </ul>
+                <button class="nav-cta">Tempah Sekarang</button>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="vietnam-hero">
+        <div class="vietnam-hero-content">
+            <h2 class="vietnam-hero-subtitle">Mood Travel Percutian eksklusif, gaya anda</h2>
+            <h1 class="vietnam-hero-title">Terokai Vietnam Bersama Mood Travel</h1>
+            <p class="vietnam-hero-description">
+               Nikmati percutian persendirian yang dirancang khas untuk keselesaan dan pengalaman terbaik anda. Dari keunikan sejarah Hanoi hingga ke panorama memukau Teluk Ha Long, kami menguruskan setiap perincian agar perjalanan anda lancar, tenang, dan bermakna.
+            </p>
+            
+            <div class="vietnam-buttons">
+                <button class="vietnam-btn-primary">Start Planning</button>
+                <button class="vietnam-btn-secondary">View Packages</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="vietnam-value-section">
+        <div class="vietnam-value-container">
+            <div class="vietnam-value-grid">
+                <div class="vietnam-value-image-wrapper">
+                    <img src="images/WV.jpeg" alt="Vietnam exotic destinations" class="vietnam-value-image">
+                    <div class="vietnam-trust-badge">
+                        <div class="vietnam-badge-icon">✓</div>
+                        <div class="vietnam-badge-text">
+                            <div class="vietnam-badge-title">Agensi Dipercayai</div>
+                            <div class="vietnam-badge-description">8 tahun pengalaman membantu lebih 5,000 rakyat Malaysia menerokai Vietnam.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vietnam-value-content">
+                    <div class="vietnam-value-label">Mengapa Memilih Kami?</div>
+                    <h2 class="vietnam-value-heading">Pengembaraan Ke Vietnam Yang Mudah & Tenang</h2>
+                    <p class="vietnam-value-subtext">
+                        Kami memahami apa yang pelancong Malaysia inginkan ketika bercuti ke Vietnam. Dari pilihan makanan halal hingga penginapan yang mesra bajet serta pembayaran mudah dalam Ringgit, kami memastikan pengalaman perjalanan anda lancar dan selesa.
+                    </p>
+
+                    <div class="vietnam-features-grid">
+                        <div class="vietnam-feature-item">
+                            <div class="vietnam-feature-icon">🏝️</div>
+                            <div class="vietnam-feature-content">
+                                <div class="vietnam-feature-title">Kepakaran Destinasi</div>
+                                <div class="vietnam-feature-description">Pengetahuan mendalam tentang destinasi utama di seluruh Vietnam</div>
+                            </div>
+                        </div>
+
+                        <div class="vietnam-feature-item">
+                            <div class="vietnam-feature-icon">💵</div>
+                            <div class="vietnam-feature-content">
+                                <div class="vietnam-feature-title">Tiada Caj Tersembunyi</div>
+                                <div class="vietnam-feature-description">Harga telus dan jelas tanpa bayaran tambahan</div>
+                            </div>
+                        </div>
+
+                        <div class="vietnam-feature-item">
+                            <div class="vietnam-feature-icon">🍜</div>
+                            <div class="vietnam-feature-content">
+                                <div class="vietnam-feature-title">Panduan Mesra Halal</div>
+                                <div class="vietnam-feature-description">Keutamaan terhadap keselamatan makanan dan pilihan diet</div>
+                            </div>
+                        </div>
+
+                        <div class="vietnam-feature-item">
+                            <div class="vietnam-feature-icon">💬</div>
+                            <div class="vietnam-feature-content">
+                                <div class="vietnam-feature-title">Sokongan WhatsApp 24/7</div>
+                                <div class="vietnam-feature-description">Sentiasa tersedia untuk membantu anda</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Makes Vietnam Different Section - Comparison -->
+    <section class="vietnam-different-section">
+        <div class="vietnam-different-container">
+            <div class="vietnam-different-header">
+                <div class="vietnam-different-label">Kenapa Vietnam?</div>
+                <h2 class="vietnam-different-heading">Mengapa Memilih MOOD Travel?</h2>
+                <p class="vietnam-different-subtext">Lihat perbezaan pengalaman yang anda peroleh apabila melancong bersama MOOD Travel berbanding agensi pelancongan lain.</p>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="vietnam-comparison-table-wrapper">
+                <table class="vietnam-comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th>MOOD Travel</th>
+                            <th>Company Y</th>
+                            <th>Company Z</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tambahan 20KG Bagasi</td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                            <td><span class="vietnam-comparison-check no">✗</span></td>
+                            <td><span class="vietnam-comparison-check no">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td>24/7 WhatsApp Support</td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                            <td><span class="vietnam-comparison-check no">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td>Tiada cas tersembunyi</td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                            <td><span class="vietnam-comparison-check no">✗</span></td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Makanan Disahkan Halal</td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                            <td><span class="vietnam-comparison-check no">✗</span></td>
+                            <td><span class="vietnam-comparison-check no">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td>Pemandu Pelancong Tempatan</td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Itinerari Boleh Disesuaikan Sepenuhnya</td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Airport Transfers Included</td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                            <td><span class="vietnam-comparison-check no">✗</span></td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Entrance Fees Included</td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                            <td><span class="vietnam-comparison-check no">✗</span></td>
+                            <td><span class="vietnam-comparison-check no">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td>Free Visa Consultation</td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                            <td><span class="vietnam-comparison-check no">✗</span></td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Free Hotel Transfers</td>  
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                            <td><span class="vietnam-comparison-check yes">✓</span></td>
+                            <td><span class="vietnam-comparison-check no">✗</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="vietnam-comparison-note">
+                    ✓ = Included | ✗ = Not Included | Prices and features may vary by package
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Packages Section -->
+    <section class="vietnam-packages-section">
+        <div class="vietnam-packages-container">
+            <div class="vietnam-packages-header">
+                <div class="vietnam-packages-header-left">
+                    <div class="vietnam-packages-label">pakej popular</div>
+                    <h2 class="vietnam-packages-heading">Pilih Pakej Percutian Vietnam Anda</h2>
+                    <p class="vietnam-packages-subtext"> All-inclusive packages with hotels, tours & local guides.</p>
+                </div>
+                <div class="vietnam-packages-header-right">
+                    <a href="#" class="vietnam-view-all-link">Lihat Semua Pakej →</a>
+                </div>
+            </div>
+
+            <div class="vietnam-packages-grid">
+                <div class="vietnam-package-card large">
+                    <img src="images/PhuQuocLP.jpg" alt="Phu Quoc Island" class="vietnam-package-image">
+                    <div class="vietnam-package-overlay">
+                        <div class="vietnam-package-badge">Paling Popular</div>
+                        <div class="vietnam-package-content">
+                            <h3 class="vietnam-package-title">Phu Quoc Island</h3>
+                            <div class="vietnam-package-route">Phu Quoc Island</div>
+                            <div class="vietnam-package-duration">4 Hari 3 Malam </div>
+                        </div>
+                        <div class="vietnam-package-footer">
+                            <div class="vietnam-package-price">From RM 1,800</div>
+                            <button class="vietnam-package-customize-btn">Pergi Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vietnam-package-card">
+                    <img src="images/DanangLP.jpg" alt="Da Nang" class="vietnam-package-image">
+                    <div class="vietnam-package-overlay">
+                        <div class="vietnam-package-badge">Paling Nature</div>
+                        <div class="vietnam-package-content">
+                            <h3 class="vietnam-package-title">Da Nang - Hoi An</h3>
+                            <div class="vietnam-package-route">Da Nang → Hoi An</div>
+                            <div class="vietnam-package-duration">4 Hari 3 Malam</div>
+                        </div>
+                        <div class="vietnam-package-footer">
+                            <div class="vietnam-package-price">From RM 1,800</div>
+                            <button class="vietnam-package-customize-btn">Pergi Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vietnam-package-card">
+                    <img src="images/HochinminLP.jpg" alt="Hochiminh City" class="vietnam-package-image">
+                    <div class="vietnam-package-overlay">
+                        <div class="vietnam-package-badge">Paling Shopping</div>
+                        <div class="vietnam-package-content">
+                            <h3 class="vietnam-package-title">Ho Chi Minh City</h3>
+                            <div class="vietnam-package-route">Ho Chi Minh City</div>
+                            <div class="vietnam-package-duration">4 Hari 3 Malam</div>
+                        </div>
+                        <div class="vietnam-package-footer">
+                            <div class="vietnam-package-price">From RM 1,800</div>
+                            <button class="vietnam-package-customize-btn">Pergi Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Trip Details Section -->
+    <section class="vietnam-itinerary-section">
+        <div class="vietnam-itinerary-header">
+            <h2>Kenali Vietnam</h2>
+            <p>Negara yang indah dengan ke sejarah yang kaya, pantai tropika, dan makanan Halal yang mudah ditemui di kawasan pelancongan.</p>
+        </div>
+
+        <div class="vietnam-itinerary-container">
+            <div class="vietnam-info-stack">
+                <div class="vietnam-info-card">
+                    <h3>Apa Itu Vietnam?</h3>
+                    <p>Vietnam ialah negara dengan sejarah panjang yang kaya, budaya yang dinamik, dan pemandangan alam yang menakjubkan dari utara hingga selatan.</p>
+                </div>
+
+                <div class="vietnam-info-card">
+                    <h3>Jarak & Masa Penerbangan</h3>
+                    <p>Untuk penerbangan terus dari Kuala Lumpur, anggaran masa ke Ho Chi Minh City atau Hanoi sekitar 2–3 jam, bergantung jadual dan cuaca.</p>
+                </div>
+
+                <div class="vietnam-info-card">
+                    <h3>Kenapa Ramai Suka</h3>
+                    <p>Pantai indah, makanan lazat, sejarah menarik, dan harga yang bajet menjadikan Vietnam sesuai untuk keluarga, pasangan, atau trip kawan-kawan.</p>
+                </div>
+
+                <div class="vietnam-map-card">
+                    <div class="vietnam-map-header">
+                        <h4>Peta Ringkas</h4>
+                        <span>Hanoi • Halong Bay • Ho Chi Minh City</span>
+                    </div>
+                    <svg class="vietnam-map-svg" viewBox="0 0 360 140" role="img" aria-label="Peta ringkas laluan Vietnam">
+                        <defs>
+                            <linearGradient id="mapLine" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#ff2d2d" />
+                                <stop offset="100%" stop-color="#ff6b6b" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M20 90 L140 60 L220 70 L320 50" fill="none" stroke="url(#mapLine)" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 6"/>
+                        <circle cx="20" cy="90" r="7" fill="#ff2d2d"/>
+                        <circle cx="140" cy="60" r="7" fill="#ff2d2d"/>
+                        <circle cx="220" cy="70" r="7" fill="#ff2d2d"/>
+                        <circle cx="320" cy="50" r="7" fill="#ff2d2d"/>
+                        <text x="20" y="115" font-size="11" fill="#666">Hanoi</text>
+                        <text x="140" y="40" font-size="11" fill="#666">Halong Bay</text>
+                        <text x="220" y="95" font-size="11" fill="#666">Da Nang</text>
+                        <text x="320" y="35" font-size="11" fill="#666">HCMC</text>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="vietnam-inclusions-box">
+                <h3>Fakta Ringkas</h3>
+                <div class="vietnam-inc-card">
+                    <i class="fas fa-language"></i>
+                    <div>
+                        <h4>Bahasa</h4>
+                        <p>Bahasa Vietnam (mudah dipelajari)</p>
+                    </div>
+                </div>
+                <div class="vietnam-inc-card">
+                    <i class="fas fa-coins"></i>
+                    <div>
+                        <h4>Mata Wang</h4>
+                        <p>Dong Vietnam (VND)</p>
+                    </div>
+                </div>
+                <div class="vietnam-inc-card">
+                    <i class="fas fa-plug"></i>
+                    <div>
+                        <h4>Elektrik</h4>
+                        <p>Palam Type C/I, 220V</p>
+                    </div>
+                </div>
+                <div class="vietnam-inc-card">
+                    <i class="fas fa-sun"></i>
+                    <div>
+                        <h4>Iklim</h4>
+                        <p>Tropika, sesuai Oct-April</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6 Tempat Menarik Section -->
+    <section class="vietnam-attractions-section">
+        <div class="vietnam-attractions-header">
+            <p class="vietnam-attractions-label">6 TEMPAT MENARIK</p>
+            <h2>Tarikan Utama di Vietnam</h2>
+        </div>
+
+        <div class="vietnam-attraction-gallery">
+            <div class="vietnam-attraction-box" onclick="vietnamSelectAttractive(this, 'hanoi')">
+                <img src="images/Cablecar1.jpg" alt="Hanoi Old Quarter">
+                <span class="vietnam-arrow-icon">→</span>
+            </div>
+
+            <div class="vietnam-attraction-box" onclick="vietnamSelectAttractive(this, 'halong')">
+                <img src="images/PhuQuocLP.jpg" alt="Bai Sao Beach">
+                <span class="vietnam-arrow-icon">→</span>
+            </div>
+
+            <div class="vietnam-attraction-box" onclick="vietnamSelectAttractive(this, 'hoian')">
+                <img src="images/WV.jpeg" alt="An Thoi Archipelago">
+                <span class="vietnam-arrow-icon">→</span>
+            </div>
+
+            <div class="vietnam-attraction-box" onclick="vietnamSelectAttractive(this, 'mekong')">
+                <img src="images/DanangLP.jpg" alt="Marble Mountains">
+                <span class="vietnam-arrow-icon">→</span>
+            </div>
+
+            <div class="vietnam-attraction-box" onclick="vietnamSelectAttractive(this, 'sapa')">
+                <img src="images/KS2.jpg" alt="Hoi An Ancient Town">
+                <span class="vietnam-arrow-icon">→</span>
+            </div>
+
+            <div class="vietnam-attraction-box" onclick="vietnamSelectAttractive(this, 'danang')">
+                <img src="images/HochinminLP.jpg" alt="Nguyen Hue Walking Street">
+                <span class="vietnam-arrow-icon">→</span>
+            </div>
+        </div>
+
+        <!-- Attraction Detail Modal -->
+        <div id="vietnam-attraction-modal" class="vietnam-attraction-modal">
+            <button class="vietnam-modal-close" onclick="closeVietnamAttractionModal()">✕</button>
+            <div class="vietnam-modal-content">
+                <div class="vietnam-modal-image">
+                    <img id="vietnam-modal-img" src="" alt="">
+                </div>
+                <div class="vietnam-modal-text">
+                    <h3 id="vietnam-modal-name"></h3>
+                    <p id="vietnam-modal-desc"></p>
+                    <div class="vietnam-modal-amenities" id="vietnam-modal-amenities"></div>
+                    <div class="vietnam-modal-buttons">
+                        <button class="vietnam-modal-cta-primary" onclick="openWhatsAppTravel()">Book Now via WhatsApp</button>
+                        <button class="vietnam-modal-cta-secondary" onclick="closeVietnamAttractionModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Moving Pictures Gallery Section -->
+    <section class="vietnam-gallery-section">
+        <div class="vietnam-gallery-container">
+            <h2 class="vietnam-gallery-title">Perjalanan Visual Menjelajahi Vietnam</h2>
+            
+            <!-- First Row: Scroll Right to Left -->
+            <div class="vietnam-scroll-container">
+                <div class="vietnam-scroll-track track-to-left">
+                    <img src="images/A1.jpg" alt="Gallery 1">
+                    <img src="images/A2.jpg" alt="Gallery 2">
+                    <img src="images/A3.jpg" alt="Gallery 3">
+                    <img src="images/A4.jpg" alt="Gallery 4">
+                    <img src="images/A5.jpg" alt="Gallery 5">
+                    <img src="images/A6.jpg" alt="Gallery 6">
+                    <img src="images/A7.jpg" alt="Gallery 7">
+                    <img src="images/A8.jpg" alt="Gallery 8">
+                    <!-- Duplicate for seamless loop -->
+                    <img src="images/A1.jpg" alt="Gallery 1">
+                    <img src="images/A2.jpg" alt="Gallery 2">
+                    <img src="images/A3.jpg" alt="Gallery 3">
+                    <img src="images/A4.jpg" alt="Gallery 4">
+                    <img src="images/A5.jpg" alt="Gallery 5">
+                    <img src="images/A6.jpg" alt="Gallery 6">
+                    <img src="images/A7.jpg" alt="Gallery 7">
+                    <img src="images/A8.jpg" alt="Gallery 8">
+                </div>
+            </div>
+
+            <!-- Second Row: Scroll Left to Right -->
+            <div class="vietnam-scroll-container">
+                <div class="vietnam-scroll-track track-to-right">
+                    <img src="images/A9.jpg" alt="Gallery 9">
+                    <img src="images/A10.jpg" alt="Gallery 10">
+                    <img src="images/A11.jpg" alt="Gallery 11">
+                    <img src="images/A12.jpg" alt="Gallery 12">
+                    <img src="images/A13.jpg" alt="Gallery 13">
+                    <img src="images/A14.jpg" alt="Gallery 14">
+                    <img src="images/A15.jpg" alt="Gallery 15">
+                    <img src="images/A16.jpg" alt="Gallery 16">
+                    <!-- Duplicate for seamless loop -->
+                    <img src="images/A9.jpg" alt="Gallery 9">
+                    <img src="images/A10.jpg" alt="Gallery 10">
+                    <img src="images/A11.jpg" alt="Gallery 11">
+                    <img src="images/A12.jpg" alt="Gallery 12">
+                    <img src="images/A13.jpg" alt="Gallery 13">
+                    <img src="images/A14.jpg" alt="Gallery 14">
+                    <img src="images/A15.jpg" alt="Gallery 15">
+                    <img src="images/A16.jpg" alt="Gallery 16">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section class="vietnam-companies-section">
+        <div class="vietnam-companies-container">
+            <h2 class="vietnam-companies-title">Dipercayai oleh Syarikat Terkemuka</h2>
+            <p class="vietnam-companies-subtitle">Ribuan perniagaan dan pelancong memilih MOOD Travel untuk pengembaraan mereka ke Vietnam</p>
+            
+            <div class="vietnam-companies-image-box">
+                <img src="images/CWW.png" alt="Partner Companies" class="vietnam-companies-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="vietnam-faq-section">
+        <div class="vietnam-faq-container">
+            <div class="vietnam-faq-header">
+                <div class="vietnam-faq-label">Soalan Lazim</div>
+                <h2 class="vietnam-faq-heading">Ada Soalan? Kami Ada Jawapan</h2>
+                <p class="vietnam-faq-subtext">Semua yang anda perlu tahu tentang merancang pengembaraan Vietnam dengan MOOD Travel</p>
+            </div>
+
+            <div class="vietnam-faq-list">
+                <div class="vietnam-faq-item">
+                    <button class="vietnam-faq-question" onclick="toggleFAQ(this)">
+                        <span>Perlu visa untuk ke Vietnam?</span>
+                        <span class="vietnam-faq-toggle">▼</span>
+                    </button>
+                    <div class="vietnam-faq-answer">
+                        <p class="vietnam-faq-answer-text">Warganegara Malaysia biasanya perlu visa untuk Vietnam. Kami boleh bantu uruskan visa e-visa dengan mudah dan cepat.</p>
+                    </div>
+                </div>
+
+                <div class="vietnam-faq-item">
+                    <button class="vietnam-faq-question" onclick="toggleFAQ(this)">
+                        <span>Bila masa terbaik untuk ke Vietnam?</span>
+                        <span class="vietnam-faq-toggle">▼</span>
+                    </button>
+                    <div class="vietnam-faq-answer">
+                        <p class="vietnam-faq-answer-text">Oktober hingga April adalah musim terbaik untuk melawati Vietnam dengan cuaca sejuk dan cerah. Kami boleh sesuaikan jadual ikut tarikh anda.</p>
+                    </div>
+                </div>
+
+                <div class="vietnam-faq-item">
+                    <button class="vietnam-faq-question" onclick="toggleFAQ(this)">
+                        <span>Berapakah anggaran harga pakej Vietnam?</span>
+                        <span class="vietnam-faq-toggle">▼</span>
+                    </button>
+                    <div class="vietnam-faq-answer">
+                        <p class="vietnam-faq-answer-text">Pakej kami bermula sekitar RM 1,999 untuk trip 4 hari dan boleh mencecah RM 5,000+ untuk trip 10 hari. Harga termasuk hotel, guide, aktiviti, dan makanan. Bayaran dalam Ringgit Malaysia disediakan.</p>
+                    </div>
+                </div>
+
+                <div class="vietnam-faq-item">
+                    <button class="vietnam-faq-question" onclick="toggleFAQ(this)">
+                        <span>Selamatkah melancong ke Vietnam?</span>
+                        <span class="vietnam-faq-toggle">▼</span>
+                    </button>
+                    <div class="vietnam-faq-answer">
+                        <p class="vietnam-faq-answer-text">Secara umum, Vietnam selamat untuk pelancong. Kami sarankan langkah keselamatan biasa dan insurans perjalanan. Guide tempatan kami tahu laluan paling selamat dan sokongan 24/7 disediakan.</p>
+                    </div>
+                </div>
+
+                <div class="vietnam-faq-item">
+                    <button class="vietnam-faq-question" onclick="toggleFAQ(this)">
+                        <span>Boleh ke ubah suai pakej?</span>
+                        <span class="vietnam-faq-toggle">▼</span>
+                    </button>
+                    <div class="vietnam-faq-answer">
+                        <p class="vietnam-faq-answer-text">Boleh! Semua pakej boleh diubah suai. Beritahu bajet, minat, dan citarasa anda—kami susun perjalanan terbaik untuk anda. Hubungi kami melalui WhatsApp.</p>
+                    </div>
+                </div>
+
+                <div class="vietnam-faq-item">
+                    <button class="vietnam-faq-question" onclick="toggleFAQ(this)">
+                        <span>Ada sediakan makanan Halal?</span>
+                        <span class="vietnam-faq-toggle">▼</span>
+                    </button>
+                    <div class="vietnam-faq-answer">
+                        <p class="vietnam-faq-answer-text">Ya! Vietnam banyak mempunyai restoran Muslim dan makanan Halal mudah didapati, terutama di bandar besar. Kami sediakan senarai restoran Halal dan boleh aturkan makan mengikut keperluan anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp CTA Section -->
+    <section class="whatsapp-cta-section">
+        <div class="whatsapp-cta-container">
+            <h2 class="whatsapp-cta-title">Sedia untuk Memulakan Perjalanan Anda?</h2>
+            <p class="whatsapp-cta-text">Berbual dengan pakar pelancongan kami di WhatsApp dan dapatkan cadangan percutian yang disesuaikan untuk anda dalam masa 24 jam.</p>
+            <a href="https://wa.me/60174117249" target="_blank" class="whatsapp-cta-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.631 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+   Hubungi Kami di WhatsApp 
+</a>
+        </div>
+    </section>
+
+    <!-- Ready to Go CTA Section -->
+    <section class="vietnam-cta-section">
+        <div class="vietnam-cta-container">
+            <div class="vietnam-cta-content">
+                <h2 class="vietnam-cta-heading">Beritahu tarikh perjalanan anda. Kami akan merancang itinerari yang sempurna untuk anda.</h2>
+                <p class="vietnam-cta-subtext">Hotel, aktiviti, pemandu tempatan, dan sokongan 24/7 — semuanya dalam satu pakej yang lancar.</p>
+            </div>
+            <div class="vietnam-cta-buttons">
+                <button class="vietnam-cta-btn-primary">Mulakan Perancangan Saya</button>
+                <button class="vietnam-cta-btn-secondary">Tempah Panggilan 15 Minit</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-column footer-logo-column">
+            <img src="images/CLNB2.png" alt="MOOD Travel Logo" class="footer-logo">
+            <p class="footer-tagline">Semuanya Dah Terurus! Baru Lah Ada Mood Nak Travel</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Syarikat</h4>
+            <ul>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Kerjaya</a></li>
+                <li><a href="#">Penerbitan</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Perkhidmatan</h4>
+            <ul>
+                <li><a href="#">Pakej Pelancongan</a></li>
+                <li><a href="#">Tempahan Khas</a></li>
+                <li><a href="#">Trip Berkumpulan</a></li>
+                <li><a href="#">Insurans Perjalanan</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Sokongan</h4>
+            <ul>
+                <li><a href="#">Pusat Bantuan</a></li>
+                <li><a href="#">Hubungi Kami</a></li>
+                <li><a href="#">Soalan Lazim (FAQ)</a></li>
+                <li><a href="#">Maklum Balas</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 MOOD Travel. Hak Cipta Terpelihara. | Dasar Privasi | Syarat Perkhidmatan</p>
+        </div>
+    </footer>
+
+    <script>
+        // Data Tarikan untuk 6 Tempat Menarik
+        const vietnamAttractionData = {
+            hanoi: {
+                name: "Sun World Hon Thom Nature Park",
+                desc: "Nikmati pengalaman menaiki cable car terpanjang di dunia di Phu Quoc, Vietnam, sambil menikmati panorama pulau yang menakjubkan, laut biru jernih, dan pemandangan hutan tropika. Aktiviti ini sesuai untuk semua peringkat umur, menawarkan pengalaman santai sambil bergambar dan menikmati pemandangan dari atas.",
+                img: "images/cablecarTA.jpg",
+                amenities: [
+                    { icon: "fas fa-gem", text: "Panorama Pulau & Laut" },
+                    { icon: "fas fa-utensils", text: "Rekod Dunia Cable Car Terpanjang" },
+                    { icon: "fas fa-museum", text: "Spot Bergambar & Pemandangan Menakjubkan" },
+                    { icon: "fas fa-photo-video", text: "Santai & Sesuai Untuk Semua" }
+                ]
+            },
+            halong: {
+                name: "Bai Sao Beach",
+                desc: "Pantai paling ikonik di Phu Quoc dengan pasir putih halus dan air biru kehijauan yang tenang. Tempat terbaik untuk bersantai, berjemur, dan menikmati suasana pulau.",
+                img: "images/PhuQuocLP.jpg",
+                amenities: [
+                    { icon: "fas fa-umbrella-beach", text: "Pantai Pasir Putih" },
+                    { icon: "fas fa-water", text: "Air Laut Jernih" },
+                    { icon: "fas fa-sun", text: "Sesuai Untuk Bersantai" },
+                    { icon: "fas fa-camera", text: "Spot Foto Cantik" }
+                ]
+            },
+            hoian: {
+                name: "An Thoi Archipelago",
+                desc: "Gugusan pulau kecil di selatan Phu Quoc yang terkenal dengan air jernih dan terumbu karang. Sangat sesuai untuk snorkeling, island hopping, dan bot persiaran.",
+                img: "images/WV.jpeg",
+                amenities: [
+                    { icon: "fas fa-swimmer", text: "Snorkeling & Laut Jernih" },
+                    { icon: "fas fa-ship", text: "Island Hopping" },
+                    { icon: "fas fa-fish", text: "Terumbu Karang" },
+                    { icon: "fas fa-camera", text: "Pemandangan Pulau" }
+                ]
+            },
+            mekong: {
+                name: "Marble Mountains",
+                desc: "Gugusan bukit batu kapur di Da Nang dengan gua, pagoda, dan pemandangan bandar serta laut dari atas. Lokasi ikonik untuk sejarah dan fotografi.",
+                img: "images/DanangLP.jpg",
+                amenities: [
+                    { icon: "fas fa-mountain", text: "Bukit Batu Kapur" },
+                    { icon: "fas fa-landmark", text: "Gua & Pagoda" },
+                    { icon: "fas fa-camera", text: "Viewpoint Cantik" },
+                    { icon: "fas fa-walking", text: "Jalur Eksplorasi" }
+                ]
+            },
+            sapa: {
+                name: "Hoi An Ancient Town",
+                desc: "Bandar warisan UNESCO yang penuh dengan seni bina klasik, lampu tanglung, dan kafe tepi sungai. Suasana malam sangat romantik dan fotogenik.",
+                img: "images/KS2.jpg",
+                amenities: [
+                    { icon: "fas fa-camera", text: "Syurga Foto" },
+                    { icon: "fas fa-shopping-bag", text: "Kedai Seni & Kraftangan" },
+                    { icon: "fas fa-lightbulb", text: "Lampu Tanglung" },
+                    { icon: "fas fa-utensils", text: "Kafe & Makanan Lokal" }
+                ]
+            },
+            danang: {
+                name: "Nguyen Hue Walking Street",
+                desc: "Jalan pejalan kaki paling terkenal di Ho Chi Minh City, penuh dengan kafe, bangunan ikonik, dan suasana bandar yang hidup terutama waktu malam.",
+                img: "images/HochinminLP.jpg",
+                amenities: [
+                    { icon: "fas fa-walking", text: "Boulevard Ikonik" },
+                    { icon: "fas fa-coffee", text: "Kafe & Dessert" },
+                    { icon: "fas fa-city", text: "Suasana Bandar" },
+                    { icon: "fas fa-camera", text: "Spot Foto Malam" }
+                ]
+            }
+        };
+
+        // Attraction Selection Function
+        function vietnamSelectAttractive(element, attractionKey) {
+            const data = vietnamAttractionData[attractionKey];
+            const modal = document.getElementById('vietnam-attraction-modal');
+
+            if (data) {
+                document.getElementById('vietnam-modal-img').src = data.img;
+                document.getElementById('vietnam-modal-name').innerText = data.name;
+                document.getElementById('vietnam-modal-desc').innerText = data.desc;
+
+                const amenitiesHTML = data.amenities
+                    .map(a => `<div class="vietnam-amenity-item"><i class="${a.icon}"></i> ${a.text}</div>`)
+                    .join('');
+                document.getElementById('vietnam-modal-amenities').innerHTML = amenitiesHTML;
+
+                modal.classList.add('active');
+            }
+        }
+
+        // Close Attraction Modal
+        function closeVietnamAttractionModal() {
+            document.getElementById('vietnam-attraction-modal').classList.remove('active');
+        }
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeVietnamAttractionModal();
+            }
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('vietnam-attraction-modal')?.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeVietnamAttractionModal();
+            }
+        });
+
+        // WhatsApp Function for Travel
+        function openWhatsAppTravel() {
+            window.open('https://wa.me/60123456789?text=Hi%2C%20I%20want%20to%20book%20a%20Vietnam%20trip%20package', '_blank');
+        }
+
+        // FAQ Toggle Function
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Remove active class from all items
+            document.querySelectorAll('.vietnam-faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Add active class to current item if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Draggable Gallery Support
+        const gallery = document.querySelector('.vietnam-attraction-gallery');
+        if (gallery) {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            gallery.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - gallery.offsetLeft;
+                scrollLeft = gallery.scrollLeft;
+                gallery.style.cursor = 'grabbing';
+            });
+
+            gallery.addEventListener('mouseleave', () => {
+                isDown = false;
+                gallery.style.cursor = 'grab';
+            });
+
+            gallery.addEventListener('mouseup', () => {
+                isDown = false;
+                gallery.style.cursor = 'grab';
+            });
+
+            gallery.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - gallery.offsetLeft;
+                const walk = (x - startX) * 1.5;
+                gallery.scrollLeft = scrollLeft - walk;
+            });
+
+            // Touch support for mobile
+            gallery.addEventListener('touchstart', (e) => {
+                isDown = true;
+                startX = e.touches[0].pageX - gallery.offsetLeft;
+                scrollLeft = gallery.scrollLeft;
+            });
+
+            gallery.addEventListener('touchend', () => {
+                isDown = false;
+            });
+
+            gallery.addEventListener('touchmove', (e) => {
+                if (!isDown) return;
+                const x = e.touches[0].pageX - gallery.offsetLeft;
+                const walk = (x - startX) * 1.5;
+                gallery.scrollLeft = scrollLeft - walk;
+            });
+        }
+    </script>
+</body>
+</html>

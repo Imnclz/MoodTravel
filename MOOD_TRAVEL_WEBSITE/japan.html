@@ -1,0 +1,2058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan Travel Packages - MOOD Travel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+
+        /* Hero Section */
+.japan-hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* CHANGE THIS: from center to flex-end */
+    justify-content: flex-end; 
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/HJ.jpg') center/cover no-repeat fixed;
+    padding-top: 80px;
+    /* ADJUST THIS: Increase this value to push the text further up from the bottom */
+    padding-bottom: 70px; 
+    text-align: center;
+}
+
+        .japan-hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            color: var(--primary-white);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .japan-hero-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--primary-white);
+            margin-bottom: 30px;
+            opacity: 0.95;
+            animation: subtitleFadeIn 0.8s ease-out;
+        }
+
+        @keyframes subtitleFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 0.95;
+                transform: translateY(0);
+            }
+        }
+
+        .japan-hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 72px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+            color: var(--primary-white);
+            animation: titleFadeIn 1s ease-out 0.2s backwards;
+        }
+
+        @keyframes titleFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .japan-hero-description {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--primary-white);
+            margin-bottom: 40px;
+            line-height: 1.6;
+            opacity: 0.9;
+            animation: descriptionFadeIn 1s ease-out 0.4s backwards;
+        }
+
+        @keyframes descriptionFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 0.9;
+                transform: translateY(0);
+            }
+        }
+
+        .japan-buttons {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            animation: buttonsFadeIn 1s ease-out 0.6s backwards;
+            position: relative;
+            z-index: 20;
+        }
+
+        @keyframes buttonsFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .japan-btn-primary {
+            background-color: var(--primary-red);
+            color: var(--primary-white);
+            padding: 16px 50px;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 15px 40px rgba(255, 45, 45, 0.4);
+        }
+
+        .japan-btn-primary:hover {
+            background-color: #E91E1E;
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(255, 45, 45, 0.6);
+        }
+
+        .japan-btn-primary:active {
+            transform: translateY(-2px);
+        }
+
+        .japan-btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            color: var(--primary-white);
+            padding: 14px 45px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px 0 rgba(255, 45, 45, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .japan-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(255, 255, 255, 0.3), inset 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .japan-btn-secondary:active {
+            transform: translateY(-2px);
+        }
+
+
+        /* Value Proposition Section */
+        .japan-value-section {
+            padding: 100px 40px;
+            background-color: var(--primary-white);
+            background-image: url('images/BG.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .japan-value-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .japan-value-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        /* Left Column - Image & Badge */
+        .japan-value-image-wrapper {
+            position: relative;
+        }
+
+        .japan-value-image {
+            width: 100%;
+            height: auto;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Floating Badge */
+        .japan-trust-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--primary-white);
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+            max-width: 280px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            animation: badgeSlideIn 1s ease-out 0.5s backwards;
+        }
+
+        @keyframes badgeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px) translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        .japan-badge-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #FF6B6B 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-white);
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .japan-badge-text {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .japan-badge-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .japan-badge-description {
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* Right Column - Text & Features */
+        .japan-value-content {
+            animation: contentFadeIn 1s ease-out 0.3s backwards;
+        }
+
+        @keyframes contentFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .japan-value-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+        }
+
+        .japan-value-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+        }
+
+        .japan-value-subtext {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 50px;
+            max-width: 550px;
+        }
+
+        /* Features Grid */
+        .japan-features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
+
+        .japan-feature-item {
+            display: flex;
+            gap: 16px;
+        }
+
+        .japan-feature-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(255, 45, 45, 0.1) 0%, rgba(255, 107, 107, 0.08) 100%);
+            border: 2px solid rgba(255, 45, 45, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: var(--primary-red);
+        }
+
+        .japan-feature-content {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .japan-feature-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .japan-feature-description {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .japan-value-grid {
+                gap: 60px;
+            }
+
+            .japan-value-heading {
+                font-size: 40px;
+            }
+
+            .japan-trust-badge {
+                max-width: 260px;
+                padding: 18px 20px;
+            }
+
+            .japan-badge-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 22px;
+            }
+
+            .japan-features-grid {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .japan-value-section {
+                padding: 80px 30px;
+            }
+
+            .japan-value-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .japan-value-heading {
+                font-size: 36px;
+            }
+
+            .japan-value-subtext {
+                font-size: 15px;
+                margin-bottom: 40px;
+            }
+
+            .japan-trust-badge {
+                position: relative;
+                bottom: auto;
+                right: auto;
+                margin-top: -60px;
+                margin-right: 20px;
+                margin-left: auto;
+                width: fit-content;
+                max-width: 280px;
+            }
+
+            .japan-features-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .japan-feature-item {
+                gap: 12px;
+            }
+
+            .japan-feature-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .japan-value-section {
+                padding: 60px 20px;
+            }
+
+            .japan-value-heading {
+                font-size: 28px;
+            }
+
+            .japan-value-label {
+                font-size: 12px;
+            }
+
+            .japan-trust-badge {
+                padding: 16px 18px;
+                max-width: 260px;
+            }
+
+            .japan-badge-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 18px;
+            }
+
+            .japan-feature-title {
+                font-size: 15px;
+            }
+        }
+
+        /* How It Works Section */
+        .japan-how-section {
+            padding: 120px 40px;
+            background-color: var(--primary-white);
+            text-align: center;
+        }
+
+        .japan-how-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .japan-how-header {
+            margin-bottom: 70px;
+        }
+
+        .japan-how-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+        }
+
+        .japan-how-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 52px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .japan-steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            margin-bottom: 70px;
+        }
+
+        .japan-step-card {
+            display: flex;
+            flex-direction: column;
+            animation: cardFadeIn 1s ease-out backwards;
+        }
+
+        .japan-step-card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .japan-step-card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .japan-step-card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes cardFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .japan-step-image-wrapper {
+            position: relative;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .japan-step-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 24px;
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .japan-step-card:hover .japan-step-image {
+            transform: scale(1.05);
+        }
+
+        /* Step Number Badge */
+        .japan-step-number {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #FF6B6B 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--primary-white);
+            box-shadow: 0 8px 25px rgba(255, 45, 45, 0.3);
+            animation: badgePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes badgePulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.08);
+            }
+        }
+
+        .japan-step-content {
+            text-align: center;
+        }
+
+        .japan-step-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .japan-step-description {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* CTA Button */
+        .japan-how-cta {
+            display: inline-block;
+            background-color: var(--primary-red);
+            color: var(--primary-white);
+            padding: 18px 60px;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 15px 40px rgba(255, 45, 45, 0.4);
+            animation: ctaFadeIn 1s ease-out 0.8s backwards;
+        }
+
+        @keyframes ctaFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .japan-how-cta:hover {
+            background-color: #E91E1E;
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(255, 45, 45, 0.6);
+        }
+
+        .japan-how-cta:active {
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .japan-how-heading {
+                font-size: 44px;
+            }
+
+            .japan-steps-grid {
+                gap: 40px;
+            }
+
+            .japan-step-image {
+                height: 220px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .japan-how-section {
+                padding: 80px 30px;
+            }
+
+            .japan-how-heading {
+                font-size: 36px;
+            }
+
+            .japan-steps-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .japan-step-image {
+                height: 240px;
+            }
+
+            .japan-step-title {
+                font-size: 20px;
+            }
+
+            .japan-how-cta {
+                padding: 16px 50px;
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .japan-how-section {
+                padding: 60px 20px;
+            }
+
+            .japan-how-heading {
+                font-size: 28px;
+            }
+
+            .japan-how-header {
+                margin-bottom: 50px;
+            }
+
+            .japan-steps-grid {
+                gap: 40px;
+            }
+
+            .japan-step-image {
+                height: 200px;
+            }
+
+            .japan-step-number {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+
+            .japan-step-title {
+                font-size: 18px;
+            }
+
+            .japan-step-description {
+                font-size: 14px;
+            }
+        }
+
+        /* Popular Packages Section */
+        .japan-packages-section {
+            padding: 120px 40px;
+            background-color: #f8f8f8;
+        }
+
+        .japan-packages-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .japan-packages-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 70px;
+            gap: 40px;
+        }
+
+        .japan-packages-header-left {
+            flex: 1;
+        }
+
+        .japan-packages-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+        }
+
+        .japan-packages-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+        }
+
+        .japan-packages-subtext {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .japan-packages-header-right {
+            flex-shrink: 0;
+        }
+
+        .japan-view-all-link {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--primary-red);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            letter-spacing: 0.5px;
+        }
+
+        .japan-view-all-link:hover {
+            transform: translateX(5px);
+        }
+
+        /* Bento Grid Layout */
+        .japan-packages-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 30px;
+            grid-template-rows: auto auto;
+        }
+
+        .japan-package-card {
+            position: relative;
+            height: 450px;
+            border-radius: 24px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .japan-package-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Large card spans 2 rows */
+        .japan-package-card.large {
+            grid-row: span 2;
+            height: auto;
+            min-height: 500px;
+        }
+
+        .japan-package-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .japan-package-card:hover .japan-package-image {
+            transform: scale(1.05);
+        }
+
+        /* Dark overlay for text readability */
+        .japan-package-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+            color: var(--primary-white);
+        }
+
+        /* Badge */
+        .japan-package-badge {
+            align-self: flex-start;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #FF6B6B 100%);
+            color: var(--primary-white);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            box-shadow: 0 8px 20px rgba(255, 45, 45, 0.3);
+        }
+
+        /* Package Content */
+        .japan-package-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .japan-package-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary-white);
+            letter-spacing: -0.5px;
+        }
+
+        .japan-package-large .japan-package-title {
+            font-size: 32px;
+        }
+
+        .japan-package-route {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            letter-spacing: 0.5px;
+        }
+
+        .japan-package-duration {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .japan-package-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .japan-package-price {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary-white);
+        }
+
+        .japan-package-customize-btn {
+            background-color: var(--primary-white);
+            color: var(--primary-red);
+            border: none;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+        }
+
+        .japan-package-customize-btn:hover {
+            background-color: var(--primary-red);
+            color: var(--primary-white);
+            transform: scale(1.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .japan-packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .japan-package-card.large {
+                grid-row: span 1;
+                height: 350px;
+            }
+
+            .japan-package-card {
+                height: 300px;
+            }
+
+            .japan-packages-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .japan-packages-heading {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .japan-packages-section {
+                padding: 80px 30px;
+            }
+
+            .japan-packages-heading {
+                font-size: 36px;
+            }
+
+            .japan-packages-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .japan-packages-header-right {
+                align-self: flex-start;
+            }
+
+            .japan-package-card {
+                height: 320px;
+            }
+
+            .japan-package-title {
+                font-size: 24px;
+            }
+
+            .japan-package-large .japan-package-title {
+                font-size: 26px;
+            }
+
+            .japan-package-overlay {
+                padding: 25px;
+            }
+
+            .japan-packages-grid {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .japan-packages-section {
+                padding: 60px 20px;
+            }
+
+            .japan-packages-heading {
+                font-size: 28px;
+            }
+
+            .japan-packages-label {
+                font-size: 12px;
+            }
+
+            .japan-package-card {
+                height: 280px;
+            }
+
+            .japan-package-title {
+                font-size: 20px;
+            }
+
+            .japan-package-overlay {
+                padding: 20px;
+            }
+
+            .japan-package-customize-btn {
+                padding: 8px 18px;
+                font-size: 11px;
+            }
+
+            .japan-package-price {
+                font-size: 14px;
+            }
+        }
+
+        /* Package List Section (non-bento layout) */
+        .japan-package-list-section {
+            padding: 80px 40px;
+            background-color: #ffffff;
+        }
+
+        .japan-package-list-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .japan-package-list-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
+        .japan-package-list-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        .japan-package-list-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .japan-package-list-card {
+            background: var(--primary-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .japan-package-list-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 50px rgba(0,0,0,0.08);
+        }
+
+        .japan-package-list-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .japan-package-list-body {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex: 1;
+        }
+
+        .japan-package-list-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--text-dark);
+        }
+
+        .japan-package-list-route {
+            font-size: 13px;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .japan-package-list-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        .japan-package-list-price {
+            font-weight: 700;
+            color: var(--primary-red);
+        }
+
+        .japan-package-list-cta {
+            background-color: var(--primary-red);
+            color: var(--primary-white);
+            border: none;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        @media (max-width: 1024px) {
+            .japan-package-list-grid { grid-template-columns: repeat(2, 1fr); }
+            .japan-package-list-heading { font-size: 28px; }
+        }
+
+        @media (max-width: 768px) {
+            .japan-package-list-grid { grid-template-columns: 1fr; }
+            .japan-package-list-section { padding: 60px 20px; }
+            .japan-package-list-image { height: 220px; }
+        }
+
+        /* Destinations Exploration Section */
+        .japan-destinations-section {
+            padding: 120px 40px;
+            background-color: var(--primary-white);
+        }
+
+        .japan-destinations-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .japan-destination-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .japan-destination-row:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Row reversal for alternating layout */
+        .japan-destination-row.reverse {
+            direction: rtl;
+        }
+
+        .japan-destination-row.reverse > * {
+            direction: ltr;
+        }
+
+        .japan-destination-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            animation: imageFadeIn 1s ease-out backwards;
+        }
+
+        @keyframes imageFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .japan-destination-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .japan-destination-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .japan-destination-content {
+            animation: contentFadeIn 1s ease-out 0.2s backwards;
+        }
+
+        @keyframes contentFadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .japan-destination-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .japan-destination-divider {
+            width: 50px;
+            height: 3px;
+            background: var(--primary-red);
+            margin-bottom: 25px;
+        }
+
+        .japan-destination-description {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .japan-destination-btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--text-dark);
+            padding: 14px 40px;
+            border: 2px solid var(--text-dark);
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+        }
+
+        .japan-destination-btn:hover {
+            background-color: var(--text-dark);
+            color: var(--primary-white);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .japan-destination-row {
+                gap: 60px;
+            }
+
+            .japan-destination-heading {
+                font-size: 28px;
+            }
+
+            .japan-destination-image img {
+                height: 380px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .japan-destinations-section {
+                padding: 80px 30px;
+            }
+
+            .japan-destination-row {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                margin-bottom: 70px;
+            }
+
+            .japan-destination-row.reverse {
+                direction: ltr;
+            }
+
+            .japan-destination-heading {
+                font-size: 26px;
+            }
+
+            .japan-destination-image img {
+                height: 320px;
+            }
+
+            .japan-destination-description {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .japan-destinations-section {
+                padding: 60px 20px;
+            }
+
+            .japan-destination-row {
+                margin-bottom: 50px;
+            }
+
+            .japan-destination-heading {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+
+            .japan-destination-divider {
+                width: 40px;
+                margin-bottom: 20px;
+            }
+
+            .japan-destination-image img {
+                height: 250px;
+            }
+
+            .japan-destination-description {
+                font-size: 14px;
+                margin-bottom: 25px;
+            }
+
+            .japan-destination-btn {
+                padding: 12px 32px;
+                font-size: 12px;
+            }
+        }
+
+        /* WhatsApp Support Box */
+        .japan-whatsapp-section {
+            padding: 60px 40px;
+            background-color: #faf5f5;
+            margin: 100px 40px;
+            border-radius: 24px;
+            text-align: center;
+            animation: supportFadeIn 1s ease-out 0.3s backwards;
+        }
+
+        @keyframes supportFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .japan-whatsapp-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+        }
+
+        .japan-whatsapp-btn {
+            display: inline-block;
+            background-color: var(--primary-red);
+            color: var(--primary-white);
+            padding: 16px 50px;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 12px 35px rgba(255, 45, 45, 0.3);
+            text-decoration: none;
+        }
+
+        .japan-whatsapp-btn:hover {
+            background-color: #E91E1E;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(255, 45, 45, 0.5);
+        }
+
+        /* Ready to Go Section */
+        .japan-cta-section {
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('images/FJ.jpg') center/cover no-repeat;
+            background-attachment: fixed;
+        }
+
+        .japan-cta-container {
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+            z-index: 10;
+            position: relative;
+        }
+
+        .japan-cta-content {
+            animation: ctaContentFadeIn 1s ease-out 0.2s backwards;
+        }
+
+        @keyframes ctaContentFadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .japan-cta-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 44px;
+            font-weight: 800;
+            color: var(--primary-white);
+            line-height: 1.2;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+        }
+
+        .japan-cta-subtext {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+        }
+
+        .japan-cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            animation: buttonsSlideIn 1s ease-out 0.4s backwards;
+        }
+
+        @keyframes buttonsSlideIn {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .japan-cta-btn-primary {
+            background-color: var(--primary-red);
+            color: var(--primary-white);
+            padding: 18px 50px;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 15px 40px rgba(255, 45, 45, 0.4);
+        }
+
+        .japan-cta-btn-primary:hover {
+            background-color: #E91E1E;
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(255, 45, 45, 0.6);
+        }
+
+        .japan-cta-btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: var(--primary-white);
+            padding: 16px 50px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1), inset 0 0 20px rgba(255, 255, 255, 0.05);
+        }
+
+        .japan-cta-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(255, 255, 255, 0.2), inset 0 0 30px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .japan-cta-container {
+                gap: 60px;
+            }
+
+            .japan-cta-heading {
+                font-size: 36px;
+            }
+
+            .japan-cta-section {
+                height: 550px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .japan-whatsapp-section {
+                margin: 80px 20px;
+                padding: 50px 30px;
+            }
+
+            .japan-whatsapp-text {
+                font-size: 20px;
+            }
+
+            .japan-cta-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0 30px;
+            }
+
+            .japan-cta-section {
+                height: auto;
+                padding: 80px 30px;
+            }
+
+            .japan-cta-heading {
+                font-size: 32px;
+            }
+
+            .japan-cta-subtext {
+                font-size: 15px;
+            }
+
+            .japan-cta-buttons {
+                gap: 12px;
+            }
+
+            .japan-cta-btn-primary,
+            .japan-cta-btn-secondary {
+                padding: 16px 40px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .japan-whatsapp-section {
+                margin: 60px 20px;
+                padding: 40px 20px;
+            }
+
+            .japan-whatsapp-text {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+
+            .japan-whatsapp-btn {
+                padding: 14px 40px;
+                font-size: 13px;
+            }
+
+            .japan-cta-container {
+                padding: 0 20px;
+            }
+
+            .japan-cta-section {
+                padding: 60px 20px;
+            }
+
+            .japan-cta-heading {
+                font-size: 26px;
+                margin-bottom: 20px;
+            }
+
+            .japan-cta-subtext {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+
+            .japan-cta-btn-primary,
+            .japan-cta-btn-secondary {
+                padding: 14px 32px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/CLNB2.png" alt="MOOD TRAVEL Logo" class="logo-img">
+            </div>
+            <div class="nav-menu-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="pengalaman.html">Experiences</a></li>
+                    <li><a href="tentang-kami.html">About Us</a></li>
+                    <li><a href="hubungi.html">Contact</a></li>
+                </ul>
+                <button class="nav-cta">Tempah Sekarang</button>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Japan Hero Section -->
+    <section class="japan-hero">
+        <div class="japan-hero-content">
+            <h2 class="japan-hero-subtitle">Malaysia's Japan Travel Specialist</h2>
+            <h1 class="japan-hero-title">Your Japan trip, planned by locals.</h1>
+            <p class="japan-hero-description">
+                Discover authentic experiences in Japan with expert local guidance and seamless planning.
+            </p>
+            
+            <div class="japan-buttons">
+                <button class="japan-btn-primary">Start Planning</button>
+                <button class="japan-btn-secondary">View Packages</button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="japan-value-section">
+        <div class="japan-value-container">
+            <div class="japan-value-grid">
+                <!-- Left Column: Image & Badge -->
+                <div class="japan-value-image-wrapper">
+                    <img src="images/WJ.jpg" alt="Vibrant Japanese city street at night" class="japan-value-image">
+                    <div class="japan-trust-badge">
+                        <div class="japan-badge-icon">✓</div>
+                        <div class="japan-badge-text">
+                            <div class="japan-badge-title">Trusted Agency</div>
+                            <div class="japan-badge-description">5 years of experience. We've helped 2,500+ Malaysians explore Japan.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Text & Features -->
+                <div class="japan-value-content">
+                    <div class="japan-value-label">Why Choose Us</div>
+                    <h2 class="japan-value-heading">Malaysia's Most Trusted Japan Experts</h2>
+                    <p class="japan-value-subtext">
+                        We understand Malaysian travelers like no one else. From Halal-certified restaurants to budget-friendly options and seamless Ringgit transactions, we've tailored every experience just for you.
+                    </p>
+
+                    <!-- Features Grid -->
+                    <div class="japan-features-grid">
+                        <div class="japan-feature-item">
+                            <div class="japan-feature-icon">🗾</div>
+                            <div class="japan-feature-content">
+                                <div class="japan-feature-title">Local Expertise</div>
+                                <div class="japan-feature-description">Insider knowledge from people who live here</div>
+                            </div>
+                        </div>
+
+                        <div class="japan-feature-item">
+                            <div class="japan-feature-icon">💵</div>
+                            <div class="japan-feature-content">
+                                <div class="japan-feature-title">Pay in Ringgit</div>
+                                <div class="japan-feature-description">No hidden fees, transparent pricing in RM</div>
+                            </div>
+                        </div>
+
+                        <div class="japan-feature-item">
+                            <div class="japan-feature-icon">🍜</div>
+                            <div class="japan-feature-content">
+                                <div class="japan-feature-title">Halal Food Guide</div>
+                                <div class="japan-feature-description">Curated dining options you can trust</div>
+                            </div>
+                        </div>
+
+                        <div class="japan-feature-item">
+                            <div class="japan-feature-icon">💬</div>
+                            <div class="japan-feature-content">
+                                <div class="japan-feature-title">24/7 WhatsApp Support</div>
+                                <div class="japan-feature-description">We're always a message away from you</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="japan-how-section">
+        <div class="japan-how-container">
+            <div class="japan-how-header">
+                <div class="japan-how-label">How It Works</div>
+                <h2 class="japan-how-heading">3 Steps to Your Dream Japan Trip</h2>
+            </div>
+
+            <div class="japan-steps-grid">
+                <!-- Step 1 -->
+                <div class="japan-step-card">
+                    <div class="japan-step-image-wrapper">
+                        <img src="images/STEP1.jpg" alt="Chat with our travel experts" class="japan-step-image">
+                        <div class="japan-step-number">01</div>
+                    </div>
+                    <div class="japan-step-content">
+                        <h3 class="japan-step-title">Chat With Us</h3>
+                        <p class="japan-step-description">Tell us your travel dreams, budget, and preferences. Our local experts will understand exactly what you're looking for.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="japan-step-card">
+                    <div class="japan-step-image-wrapper">
+                        <img src="images/STEP2.jpeg" alt="Receive custom itinerary" class="japan-step-image">
+                        <div class="japan-step-number">02</div>
+                    </div>
+                    <div class="japan-step-content">
+                        <h3 class="japan-step-title">Get Your Custom Plan</h3>
+                        <p class="japan-step-description">We'll craft a personalized itinerary with handpicked experiences, restaurants, and accommodations just for you.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="japan-step-card">
+                    <div class="japan-step-image-wrapper">
+                        <img src="images/STEP3.jpeg " alt="Travel with confidence" class="japan-step-image">
+                        <div class="japan-step-number">03</div>
+                    </div>
+                    <div class="japan-step-content">
+                        <h3 class="japan-step-title">Travel With Confidence</h3>
+                        <p class="japan-step-description">Enjoy your trip with 24/7 WhatsApp support. We're here for any questions, changes, or emergencies along the way.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="japan-how-cta">Start Planning Now →</button>
+        </div>
+    </section>
+
+    <!-- Popular Packages Section -->
+    <section class="japan-packages-section">
+        <div class="japan-packages-container">
+            <!-- Header -->
+            <div class="japan-packages-header">
+                <div class="japan-packages-header-left">
+                    <div class="japan-packages-label">Popular Packages</div>
+                    <h2 class="japan-packages-heading">Pick Your Perfect Route</h2>
+                    <p class="japan-packages-subtext">Fully customizable. Prices include JR Pass, hotels & airport transfers.</p>
+                </div>
+                <div class="japan-packages-header-right">
+                    <a href="#" class="japan-view-all-link">View all packages →</a>
+                </div>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="japan-packages-grid">
+                <!-- Large Card (Left) -->
+                <div class="japan-package-card large">
+                    <img src="images/TJ.jpg" alt="Golden Route" class="japan-package-image">
+                    <div class="japan-package-overlay">
+                        <div class="japan-package-badge">Most Booked</div>
+                        <div class="japan-package-content">
+                            <h3 class="japan-package-title">Golden Route</h3>
+                            <div class="japan-package-route">Tokyo → Hakone → Kyoto → Osaka</div>
+                            <div class="japan-package-duration">7-9 days</div>
+                        </div>
+                        <div class="japan-package-footer">
+                            <div class="japan-package-price">From RM 4,299</div>
+                            <button class="japan-package-customize-btn">Customize</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Small Card (Right) -->
+                <div class="japan-package-card">
+                    <img src="images/USJ.jpg" alt="Northern Escape" class="japan-package-image">
+                    <div class="japan-package-overlay">
+                        <div class="japan-package-badge">Winter Favorite</div>
+                        <div class="japan-package-content">
+                            <h3 class="japan-package-title">Northern Escape</h3>
+                            <div class="japan-package-route">Sapporo → Otaru → Furano</div>
+                            <div class="japan-package-duration">6-8 days</div>
+                        </div>
+                        <div class="japan-package-footer">
+                            <div class="japan-package-price">From RM 5,199</div>
+                            <button class="japan-package-customize-btn">Customize</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Small Card (Right) -->
+                <div class="japan-package-card">
+                    <img src="images/PJ.jpg" alt="Island + City" class="japan-package-image">
+                    <div class="japan-package-overlay">
+                        <div class="japan-package-badge">Quick Escape</div>
+                        <div class="japan-package-content">
+                            <h3 class="japan-package-title">Island + City</h3>
+                            <div class="japan-package-route">Tokyo → Kamakura → Enoshima</div>
+                            <div class="japan-package-duration">3-4 days</div>
+                        </div>
+                        <div class="japan-package-footer">
+                            <div class="japan-package-price">From RM 2,899</div>
+                            <button class="japan-package-customize-btn">Customize</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <!-- Package List (simple grid) -->
+    <section class="japan-package-list-section">
+        <div class="japan-package-list-container">
+            <div class="japan-package-list-header">
+                <h3 class="japan-package-list-heading">More Packages You May Like</h3>
+                <a href="#" class="japan-view-all-link">Browse All Packages →</a>
+            </div>
+
+            <div class="japan-package-list-grid">
+                <!-- Card 1 -->
+                <div class="japan-package-list-card">
+                    <img src="images/TJ.jpg" alt="Golden Route" class="japan-package-list-image">
+                    <div class="japan-package-list-body">
+                        <div>
+                            <div class="japan-package-list-title">Golden Route</div>
+                            <div class="japan-package-list-route">Tokyo → Hakone → Kyoto → Osaka</div>
+                        </div>
+                        <div class="japan-package-list-footer">
+                            <div class="japan-package-list-price">From RM 4,299</div>
+                            <button class="japan-package-list-cta">Customize</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="japan-package-list-card">
+                    <img src="images/USJ.jpg" alt="Northern Escape" class="japan-package-list-image">
+                    <div class="japan-package-list-body">
+                        <div>
+                            <div class="japan-package-list-title">Northern Escape</div>
+                            <div class="japan-package-list-route">Sapporo → Otaru → Furano</div>
+                        </div>
+                        <div class="japan-package-list-footer">
+                            <div class="japan-package-list-price">From RM 5,199</div>
+                            <button class="japan-package-list-cta">Customize</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="japan-package-list-card">
+                    <img src="images/PJ.jpg" alt="Island + City" class="japan-package-list-image">
+                    <div class="japan-package-list-body">
+                        <div>
+                            <div class="japan-package-list-title">Island + City</div>
+                            <div class="japan-package-list-route">Tokyo → Kamakura → Enoshima</div>
+                        </div>
+                        <div class="japan-package-list-footer">
+                            <div class="japan-package-list-price">From RM 2,899</div>
+                            <button class="japan-package-list-cta">Customize</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="japan-package-list-card">
+                    <img src="images/A1.jpg" alt="Cultural Trails" class="japan-package-list-image">
+                    <div class="japan-package-list-body">
+                        <div>
+                            <div class="japan-package-list-title">Cultural Trails</div>
+                            <div class="japan-package-list-route">Kyoto → Nara → Kanazawa</div>
+                        </div>
+                        <div class="japan-package-list-footer">
+                            <div class="japan-package-list-price">From RM 3,499</div>
+                            <button class="japan-package-list-cta">Customize</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="japan-package-list-card">
+                    <img src="images/A2.jpg" alt="Foodie Tour" class="japan-package-list-image">
+                    <div class="japan-package-list-body">
+                        <div>
+                            <div class="japan-package-list-title">Foodie Tour</div>
+                            <div class="japan-package-list-route">Tokyo → Osaka → Fukuoka</div>
+                        </div>
+                        <div class="japan-package-list-footer">
+                            <div class="japan-package-list-price">From RM 2,999</div>
+                            <button class="japan-package-list-cta">Customize</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="japan-package-list-card">
+                    <img src="images/A3.jpg" alt="Hidden Onsen Getaway" class="japan-package-list-image">
+                    <div class="japan-package-list-body">
+                        <div>
+                            <div class="japan-package-list-title">Hidden Onsen Getaway</div>
+                            <div class="japan-package-list-route">Hakone → Kusatsu → Beppu</div>
+                        </div>
+                        <div class="japan-package-list-footer">
+                            <div class="japan-package-list-price">From RM 3,899</div>
+                            <button class="japan-package-list-cta">Customize</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Exploration Section -->
+    <section class="japan-destinations-section">
+        <div class="japan-destinations-container">
+            <!-- Row 1: Osaka (Right Image, Left Text) -->
+            <div class="japan-destination-row">
+                <div class="japan-destination-content">
+                    <h2 class="japan-destination-heading">Elevate Your Taste in Osaka</h2>
+                    <div class="japan-destination-divider"></div>
+                    <p class="japan-destination-description">
+                        Known as the kitchen of Japan, explore the vibrant food stalls and hidden bars. We include a private food tour and skip-the-line access to the Umeda Sky Building.
+                    </p>
+                    <a href="#" class="japan-destination-btn">Explore Osaka</a>
+                </div>
+                <div class="japan-destination-image">
+                    <img src="images/OSAKA.jpg" alt="Osaka Dotonbori neon lights">
+                </div>
+            </div>
+
+            <!-- Row 2: Tokyo (Left Image, Right Text) -->
+            <div class="japan-destination-row reverse">
+                <div class="japan-destination-image">
+                    <img src="images/TOKYO.jpg" alt="Tokyo Shibuya Crossing">
+                </div>
+                <div class="japan-destination-content">
+                    <h2 class="japan-destination-heading">Discover the Heart of Tokyo</h2>
+                    <div class="japan-destination-divider"></div>
+                    <p class="japan-destination-description">
+                        From the neon lights of Shinjuku to the quiet temples of Asakusa, experience the contrast of the world's largest city. Includes a 7-day JR Pass and luxury Ginza accommodation.
+                    </p>
+                    <a href="#" class="japan-destination-btn">Explore Tokyo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Support Section -->
+    <div class="japan-whatsapp-section">
+        <p class="japan-whatsapp-text">Still have questions?</p>
+        <a href="https://wa.me/your-number" class="japan-whatsapp-btn">Chat with us on WhatsApp →</a>
+    </div>
+
+    <!-- Ready to Go CTA Section -->
+    <section class="japan-cta-section">
+        <div class="japan-cta-container">
+            <div class="japan-cta-content">
+                <h2 class="japan-cta-heading">Tell us your dates. Get a plan in under 24 hours.</h2>
+                <p class="japan-cta-subtext">Trains, hotels, airport transfers, support—one itinerary, one payment.</p>
+            </div>
+            <div class="japan-cta-buttons">
+                <button class="japan-cta-btn-primary">Start my plan</button>
+                <button class="japan-cta-btn-secondary">Book a 15-min call</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-column footer-logo-column">
+        <img src="images/CLNB2.png" alt="MOOD Travel Logo" class="footer-logo">
+        <p class="footer-tagline">Semuanya Dah Terurus! Baru Lah Ada Mood Nak Travel</p>
+    </div>
+
+    <div class="footer-column">
+        <h4>Syarikat</h4>
+        <ul>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Kerjaya</a></li>
+            <li><a href="#">Penerbitan</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+        <h4>Perkhidmatan</h4>
+        <ul>
+            <li><a href="#">Pakej Pelancongan</a></li>
+            <li><a href="#">Tempahan Khas</a></li>
+            <li><a href="#">Trip Berkumpulan</a></li>
+            <li><a href="#">Insurans Perjalanan</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+        <h4>Sokongan</h4>
+        <ul>
+            <li><a href="#">Pusat Bantuan</a></li>
+            <li><a href="#">Hubungi Kami</a></li>
+            <li><a href="#">Soalan Lazim (FAQ)</a></li>
+            <li><a href="#">Maklum Balas</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 MOOD Travel. Hak Cipta Terpelihara. | Dasar Privasi | Syarat Perkhidmatan</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOOD - Pengalaman Perjalanan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="logo">
+            <img src="images/CLNB2.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="nav-menu-wrapper">
+            <ul class="nav-links">
+                <li><a href="#utama">Utama</a></li>
+                <li><a href="#package">Pakej</a></li>
+                <li><a href="pengalaman.html">Pengalaman</a></li>
+                <li><a href="hubungi.html">Hubungi</a></li>
+                <li><a href="tentang-kami.html">Tentang Kami</a></li>
+            </ul>
+            <button class="nav-cta">Tempah Sekarang</button>
+        </div>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Animated gradient background -->
+        <div class="hero-background"></div>
+        
+        <!-- Floating decorative elements -->
+        <div class="floating-shape floating-circle-1"></div>
+        <div class="floating-shape floating-circle-2"></div>
+        <div class="floating-shape floating-circle-3"></div>
+        <div class="floating-shape floating-square-1"></div>
+        <div class="floating-shape floating-circle-4"></div>
+        
+        <!-- Glow orbs -->
+        <div class="glow-orb glow-1"></div>
+        <div class="glow-orb glow-2"></div>
+        
+        <!-- Video background (hidden initially) -->
+        <video id="heroVideo" class="hero-video" muted preload="none">
+            <source src="videos/V1.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Woman image (bottom-right) -->
+        <img src="images/HBG.png" alt="Woman in pink shirt" class="hero-image">
+        
+        <!-- Hero content -->
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Semuanya Dah Terurus! Baru Lah Ada <span class="emphasis">Mood</span> Nak <span class="emphasis">Travel</span>
+            </h1>
+            <p class="hero-subtext">
+                Dengan Mood Travel, setiap perjalanan dirancang rapi supaya anda boleh menikmati percutian tanpa stress.
+            </p>
+        </div>
+        
+        <!-- Butang Tonton Video -->
+        <button class="watch-video-btn" id="watchVideoBtn">Tonton Video</button>
+    </section>
+        <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <!-- Floating decorative elements -->
+        <div class="floating-shape floating-circle-1"></div>
+        <div class="floating-shape floating-circle-2"></div>
+        <div class="floating-shape floating-square-1"></div>
+        <div class="glow-orb glow-1"></div>
+        <div class="glow-orb glow-2"></div>
+        
+        <div class="experience-container">
+            <h2 class="section-title">Pengalaman Perjalanan Yang Sempurna</h2>
+            <p class="section-subtitle">Nikmati setiap momen perjalanan anda dengan layanan terbaik dari Mood Travel</p>
+            
+            <div class="experience-cards-container">
+            <div class="experience-card" data-card="1">
+                <h3 class="card-title">MELANCONG DENGAN TENANG</h3>
+                <div class="experience-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path d="M12 2.5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 12 2.5Zm0 17.2a7.7 7.7 0 1 1 7.7-7.7 7.71 7.71 0 0 1-7.7 7.7Zm3.85-11.7-6.44 2.36a.6.6 0 0 0-.36.77l2.36 6.44a.6.6 0 0 0 1.13 0l2.36-6.44a.6.6 0 0 0-.35-.77Zm-3.6 7.03-1.49-4.06 4.06-1.49Z"/>
+                    </svg>
+                </div>
+                <div class="card-description">
+                    <p>Kami mengurus semua butiran perjalanan anda dengan profesional dan terpercaya. Tiada caj tersembunyi, hanya ketelusan penuh untuk keselesaan anda.</p>
+                </div>
+            </div>
+
+            <div class="experience-card" data-card="2">
+                <h3 class="card-title">FLEKSIBEL & BOLEH DIUBAH SUAI</h3>
+                <div class="experience-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path d="M12 2.5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 12 2.5Zm0 17.2a7.7 7.7 0 1 1 7.7-7.7 7.71 7.71 0 0 1-7.7 7.7Zm3.85-11.7-6.44 2.36a.6.6 0 0 0-.36.77l2.36 6.44a.6.6 0 0 0 1.13 0l2.36-6.44a.6.6 0 0 0-.35-.77Zm-3.6 7.03-1.49-4.06 4.06-1.49Z"/>
+                    </svg>
+                </div>
+                <div class="card-description">
+                    <p>Setiap perjalanan dirancang khusus mengikut keperluan anda. Dari itinerari yang boleh disesuaikan hingga tempo yang fleksibel, kami sesuaikan semuanya untuk anda.</p>
+                </div>
+            </div>
+
+            <div class="experience-card" data-card="3">
+                <h3 class="card-title">MOMEN BERMAKNA</h3>
+                <div class="experience-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                        <path d="M12 2.5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 12 2.5Zm0 17.2a7.7 7.7 0 1 1 7.7-7.7 7.71 7.71 0 0 1-7.7 7.7Zm3.85-11.7-6.44 2.36a.6.6 0 0 0-.36.77l2.36 6.44a.6.6 0 0 0 1.13 0l2.36-6.44a.6.6 0 0 0-.35-.77Zm-3.6 7.03-1.49-4.06 4.06-1.49Z"/>
+                    </svg>
+                </div>
+                <div class="card-description">
+                    <p>Kami percaya perjalanan adalah tentang mencipta momen berharga bersama orang tersayang. Setiap pengalaman dirancang untuk meninggalkan kesan mendalam yang tidak terlupakan.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+        
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stat-item">
+            <h4>50K+</h4>
+            <p>Pelancong Bahagia</p>
+        </div>
+        <div class="stat-item">
+            <h4>100+</h4>
+            <p>Destinasi</p>
+        </div>
+        <div class="stat-item">
+            <h4>10+</h4>
+            <p>Tahun Pengalaman</p>
+        </div>
+        <div class="stat-item">
+            <h4>99%</h4>
+            <p>Tingkat Kepuasan</p>
+        </div>
+    </section>
+
+    <!-- Package Section -->
+    <section id="package" class="package-section">
+        <!-- Floating decorative elements -->
+        <div class="floating-shape floating-circle-1"></div>
+        <div class="floating-shape floating-circle-2"></div>
+        <div class="floating-shape floating-square-1"></div>
+        <div class="glow-orb glow-1"></div>
+        <div class="glow-orb glow-2"></div>
+        
+        <div class="package-container">
+            <div class="package-header">
+                <h2 class="package-title">Semua Urusan Travel, Kami Settle</h2>
+                <p class="package-subtext">Tak perlu pening fikir pasal plan perjalanan. Dengan Mood Travel, semua sudah kami atur dengan profesional untuk memastikan percutian anda lancar dan menyeronokkan.</p>
+            </div>
+
+            <div class="package-grid">
+                <!-- Row 1: 2 Large Cards -->
+                <div class="package-card large" onclick="navigateToPackage('private-trip')">
+                    <img src="images/PT.jpeg" alt="Trip Persendirian" class="package-card-image">
+                    <h3 class="package-card-title">TRIP PERSENDIRIAN</h3>
+                    <p class="package-card-description">Rancang perjalanan impian anda dengan pakej peribadi yang fleksibel dan disesuaikan dengan keperluan anda.</p>
+                </div>
+                <div class="package-card large" onclick="navigateToPackage('private-trip')">
+                    <img src="images/OT.jpeg" alt="Open Trip" class="package-card-image">
+                    <h3 class="package-card-title">OPEN TRIP</h3>
+                    <p class="package-card-description">Sertai pelancong lain dalam pengembaraan yang seronok dan jimat kos untuk destinasi popular.</p>
+                </div>
+
+                <!-- Row 2: 3 Cards -->
+                <div class="package-card" onclick="navigateToPackage('private-trip')">
+                    <img src="images/CG.jpg" alt="Trip Syarikat" class="package-card-image">
+                    <h3 class="package-card-title">TRIP SYARIKAT</h3>
+                    <p class="package-card-description">Aktiviti bonding pasukan yang sempurna dengan pakej percutian korporat yang direka khusus untuk syarikat anda.</p>
+                </div>
+                <div class="package-card" onclick="navigateToPackage('hotel')">
+                    <img src="images/HR.jpg" alt="Hotel" class="package-card-image">
+                    <h3 class="package-card-title">HOTEL</h3>
+                    <p class="package-card-description">Pilihan penginapan terbaik dari hotel lima bintang hingga butik yang selesa dan mampu milik.</p>
+                </div>
+                <div class="package-card" onclick="navigateToPackage('flight')">
+                    <img src="images/FT.jpg" alt="Penerbangan" class="package-card-image">
+                    <h3 class="package-card-title">PENERBANGAN</h3>
+                    <p class="package-card-description">Tempah tiket penerbangan dengan harga kompetitif dan kemudahan dalam satu platform tempahan kami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Package List (simple grid) -->
+    <section class="package-list-section">
+        <div class="package-list-container">
+            <div class="package-list-header">
+                <h3 class="package-list-heading">Lebih Banyak Pakej Untuk Anda</h3>
+                <a href="packages.html" class="view-all-link">Lihat Semua Pakej →</a>
+            </div>
+
+            <div class="package-list-grid">
+                <!-- Card 1 -->
+                <div class="package-list-card">
+                    <img src="images/HJ.jpg" alt="Trip Persendirian" class="package-list-image">
+                    <div class="package-list-body">
+                        <div>
+                            <div class="package-list-title">Japan</div>
+                            <div class="package-list-route">Itinerari khas, tarikh fleksibel</div>
+                        </div>
+                        <div class="package-list-footer">
+                            <div class="package-list-price">Dari RM 3,999</div>
+                            <a href="packages.html?type=private-trip" class="package-list-cta">Ubah Suai</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="package-list-card">
+                    <img src="images/BLP.jpeg" alt="Open Trip" class="package-list-image">
+                    <div class="package-list-body">
+                        <div>
+                            <div class="package-list-title">Bandung</div>
+                            <div class="package-list-route">Sertai kumpulan kecil ke destinasi popular</div>
+                        </div>
+                        <div class="package-list-footer">
+                            <div class="package-list-price">Dari RM 1,299</div>
+                            <a href="packages.html?type=opentrip" class="package-list-cta">Ubah Suai</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="package-list-card">
+                    <img src="images/DLP.jpeg" alt="Trip Syarikat" class="package-list-image">
+                    <div class="package-list-body">
+                        <div>
+                            <div class="package-list-title">Danang</div>
+                            <div class="package-list-route">Percutian korporat dan pembinaan pasukan</div>
+                        </div>
+                        <div class="package-list-footer">
+                            <div class="package-list-price">Dari RM 5,499</div>
+                            <a href="packages.html?type=company-trip" class="package-list-cta">Ubah Suai</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="package-list-card">
+                    <img src="images/KLP.jpg" alt="Hotel" class="package-list-image">
+                    <div class="package-list-body">
+                        <div>
+                            <div class="package-list-title">Korea</div>
+                            <div class="package-list-route">Penginapan pilihan dari bajet hingga mewah</div>
+                        </div>
+                        <div class="package-list-footer">
+                            <div class="package-list-price">Dari RM 199/malam</div>
+                            <a href="packages.html?type=hotel" class="package-list-cta">Ubah Suai</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="package-list-card">
+                    <img src="images/PLP.jpg" alt="Penerbangan" class="package-list-image">
+                    <div class="package-list-body">
+                        <div>
+                            <div class="package-list-title">Phu Quoc</div>
+                            <div class="package-list-route">Gabung penerbangan dan hotel untuk jimat</div>
+                        </div>
+                        <div class="package-list-footer">
+                            <div class="package-list-price">Dari RM 899</div>
+                            <a href="packages.html?type=flight" class="package-list-cta">Ubah Suai</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="package-list-card">
+                    <img src="images/ALP.jpg" alt="Special Promo" class="package-list-image">
+                    <div class="package-list-body">
+                        <div>
+                            <div class="package-list-title">Amsterdam</div>
+                            <div class="package-list-route">Diskaun terhad & tawaran bermusim</div>
+                        </div>
+                        <div class="package-list-footer">
+                            <div class="package-list-price">Dari RM 699</div>
+                            <a href="packages.html" class="package-list-cta">Ubah Suai</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Red Box Gallery Section -->
+<section class="customer-experience">
+    <h2 class="section-title">Visual Mood Kami</h2>
+    
+    <div class="red-box-container">
+        <!-- First Row: Scroll Right to Left -->
+        <div class="scroll-container">
+            <div class="scroll-track track-to-left">
+                <img src="images/A1.jpg" onclick="openLightbox(this.src)" alt="1">
+                <img src="images/A2.jpg" onclick="openLightbox(this.src)" alt="2">
+                <img src="images/A3.jpg" onclick="openLightbox(this.src)" alt="3">
+                <img src="images/A4.jpg" onclick="openLightbox(this.src)" alt="4">
+                <img src="images/A5.jpg" onclick="openLightbox(this.src)" alt="5">
+                <img src="images/A6.jpg" onclick="openLightbox(this.src)" alt="6">
+                <img src="images/A7.jpg" onclick="openLightbox(this.src)" alt="7">
+                <img src="images/A8.jpg" onclick="openLightbox(this.src)" alt="8">
+                <!-- Duplicate for seamless loop -->
+                <img src="images/A1.jpg" onclick="openLightbox(this.src)" alt="1">
+                <img src="images/A2.jpg" onclick="openLightbox(this.src)" alt="2">
+                <img src="images/A3.jpg" onclick="openLightbox(this.src)" alt="3">
+                <img src="images/A4.jpg" onclick="openLightbox(this.src)" alt="4">
+                <img src="images/A5.jpg" onclick="openLightbox(this.src)" alt="5">
+                <img src="images/A6.jpg" onclick="openLightbox(this.src)" alt="6">
+                <img src="images/A7.jpg" onclick="openLightbox(this.src)" alt="7">
+                <img src="images/A8.jpg" onclick="openLightbox(this.src)" alt="8">
+            </div>
+        </div>
+
+        <!-- Second Row: Scroll Left to Right -->
+        <div class="scroll-container">
+            <div class="scroll-track track-to-right"> 
+                <img src="images/A9.jpg" onclick="openLightbox(this.src)" alt="9">
+                <img src="images/A10.jpg" onclick="openLightbox(this.src)" alt="10">
+                <img src="images/A11.jpg" onclick="openLightbox(this.src)" alt="11">
+                <img src="images/A12.jpg" onclick="openLightbox(this.src)" alt="12">
+                <img src="images/A13.jpg" onclick="openLightbox(this.src)" alt="13">
+                <img src="images/A14.jpg" onclick="openLightbox(this.src)" alt="14">
+                <img src="images/A15.jpg" onclick="openLightbox(this.src)" alt="15">
+                <img src="images/A16.jpg" onclick="openLightbox(this.src)" alt="16">
+                <!-- Duplicate for seamless loop -->
+                <img src="images/A9.jpg" onclick="openLightbox(this.src)" alt="9">
+                <img src="images/A10.jpg" onclick="openLightbox(this.src)" alt="10">
+                <img src="images/A11.jpg" onclick="openLightbox(this.src)" alt="11">
+                <img src="images/A12.jpg" onclick="openLightbox(this.src)" alt="12">
+                <img src="images/A13.jpg" onclick="openLightbox(this.src)" alt="13">
+                <img src="images/A14.jpg" onclick="openLightbox(this.src)" alt="14">
+                <img src="images/A15.jpg" onclick="openLightbox(this.src)" alt="15">
+                <img src="images/A16.jpg" onclick="openLightbox(this.src)" alt="16">
+            </div>
+        </div>
+    </div>
+</section>
+  
+
+<div id="lightboxModal" class="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImage" class="lightbox-img" src="" alt="Enlarged view">
+</div>
+
+    <!-- Companies/Brands Showcase Section -->
+    <section class="companies-section">
+        <div class="companies-container">
+            <h2 class="companies-title">Dipercayai oleh Syarikat Terkemuka</h2>
+            <p class="companies-subtitle">Ribuan perniagaan dan pelancong memilih MOOD Travel untuk pengembaraan mereka</p>
+            
+            <div class="companies-image-box">
+                <img src="images/CWW.png" alt="Partner Companies" class="companies-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp CTA Section -->
+    <section class="whatsapp-cta-section">
+        <div class="whatsapp-cta-container">
+            <h2 class="whatsapp-cta-title">Sedia Untuk Memulakan Perjalanan Anda?</h2>
+            <p class="whatsapp-cta-text">Berbual dengan pakar pelancongan kami di WhatsApp dan dapatkan cadangan percutian yang disesuaikan dalam masa 24 jam</p>
+            <a href="https://wa.me/+60174117249" target="_blank" class="whatsapp-cta-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.631 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+    WhatsApp Kami 
+</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-column footer-logo-column">
+        <img src="images/CLNB2.png" alt="Logo MOOD Travel" class="footer-logo">
+        <p class="footer-tagline">Semuanya Dah Terurus! Baru Lah Ada Mood Nak Travel</p>
+    </div>
+
+    <div class="footer-column">
+        <h4>Syarikat</h4>
+        <ul>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Kerjaya</a></li>
+            <li><a href="#">Penerbitan</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+        <h4>Perkhidmatan</h4>
+        <ul>
+            <li><a href="#">Pakej Pelancongan</a></li>
+            <li><a href="#">Tempahan Khas</a></li>
+            <li><a href="#">Trip Berkumpulan</a></li>
+            <li><a href="#">Insurans Perjalanan</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+        <h4>Sokongan</h4>
+        <ul>
+            <li><a href="#">Pusat Bantuan</a></li>
+            <li><a href="#">Hubungi Kami</a></li>
+            <li><a href="#">Soalan Lazim (FAQ)</a></li>
+            <li><a href="#">Maklum Balas</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 MOOD Travel. Hak Cipta Terpelihara. | Dasar Privasi | Syarat Perkhidmatan</p>
+    </div>
+</footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - MOOD Travel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: var(--primary-white);
+            background-image: url('images/BG.png');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .about-page {
+            min-height: 100vh;
+            padding-top: 150px;
+            padding-bottom: 60px;
+        }
+
+        .about-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-red);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        .back-button:hover {
+            gap: 12px;
+            color: var(--accent-dark);
+        }
+
+        .back-button::before {
+            content: "←";
+            font-size: 20px;
+        }
+
+        /* Animated Hero Section */
+        .animated-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+            margin-bottom: 80px;
+            padding: 10px 1px;
+        }
+
+        .animated-text-container {
+            font-size: 200px;
+            font-weight: 900;
+            font-family: 'Bebas Neue', 'Anton', 'Poppins', sans-serif;
+            letter-spacing: 0.02em;
+            line-height: 0.9;
+            margin: 0;
+            padding: 0;
+            color: var(--primary-red);
+        }
+
+        .text-we {
+            display: block;
+            color: var(--primary-red);
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
+        .text-serve {
+            display: block;
+            color: var(--primary-red);
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 0.3s ease-out forwards 1s;
+            opacity: 0;
+        }
+
+        .cycling-word {
+            display: block;
+            color: var(--accent-dark);
+            font-weight: 900;
+            font-family: 'Bebas Neue', 'Anton', 'Poppins', sans-serif;
+            height: auto;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 0.3s ease-out forwards 2s;
+            opacity: 0;
+        }
+
+        .word {
+            display: inline;
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
+        .word.active {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
+        .word.exit {
+            animation: fadeOut 0.3s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOutDown {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+        }
+
+        .final-text {
+            display: block;
+            margin-top: 15px;
+            font-size: 16px;
+            color: var(--text-dark);
+            opacity: 1;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hero Section */
+        .about-hero {
+            background: linear-gradient(135deg, rgba(255, 45, 45, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%);
+            border-radius: 20px;
+            padding: 80px 40px;
+            text-align: center;
+            margin-bottom: 80px;
+            border: 2px solid rgba(255, 45, 45, 0.2);
+        }
+
+        .about-hero h1 {
+            font-size: 64px;
+            color: var(--primary-red);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .about-hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Content Grid */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .about-content h2 {
+            font-size: 40px;
+            color: var(--primary-red);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .about-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Mission & Vision */
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .mv-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--primary-red);
+            overflow: hidden;
+            margin: 15px;
+        }
+
+        .mv-card h3 {
+            font-size: 28px;
+            color: var(--primary-red);
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .mv-card p {
+            font-size: 15px;
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        /* Values Section */
+        .values-section {
+            margin-bottom: 80px;
+        }
+
+        .values-title {
+            font-size: 48px;
+            color: var(--primary-red);
+            text-align: center;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .value-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            margin: 15px;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(255, 45, 45, 0.2);
+        }
+
+        .value-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .value-card h4 {
+            font-size: 22px;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .value-card p {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Team Section */
+        .team-section {
+            margin-bottom: 80px;
+        }
+
+        .team-title {
+            font-size: 48px;
+            color: var(--primary-red);
+            text-align: center;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            margin: 15px;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(255, 45, 45, 0.2);
+        }
+
+        .team-member-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: linear-gradient(135deg, rgba(255, 45, 45, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%);
+        }
+
+        .team-member-info {
+            padding: 25px;
+        }
+
+        .team-member-name {
+            font-size: 20px;
+            color: var(--primary-red);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .team-member-role {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .team-member-desc {
+            font-size: 13px;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Achievements Section */
+        .achievements {
+            background: linear-gradient(135deg, rgba(255, 45, 45, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%);
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin-bottom: 80px;
+        }
+
+        .achievements-title {
+            font-size: 40px;
+            color: var(--primary-red);
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .achievement-item h3 {
+            font-size: 36px;
+            color: var(--primary-red);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .achievement-item p {
+            font-size: 15px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .about-page {
+                padding-top: 120px;
+            }
+
+            .about-hero {
+                padding: 40px 20px;
+            }
+
+            .about-hero h1 {
+                font-size: 40px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-content h2 {
+                font-size: 32px;
+            }
+
+            .mission-vision {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/CLNB2.png" alt="MOOD TRAVEL Logo" class="logo-img">
+            </div>
+            <div class="nav-menu-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html#utama">Utama</a></li>
+                    <li><a href="index.html#package">Pakej</a></li>
+                    <li><a href="pengalaman.html">Pengalaman</a></li>
+                    <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                    <li><a href="hubungi.html">Hubungi</a></li>
+                </ul>
+                <button class="nav-cta">Tempah Sekarang</button>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="about-page">
+        <div class="about-section">
+
+            <!-- Animated Hero Section -->
+            <div class="animated-hero">
+                <div class="animated-text-container">
+                    <span class="text-we">WE</span>
+                    <span class="text-serve">SERVE</span>
+                    <div class="cycling-word">
+                        <span class="word active">TRAVELERS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Original Hero Section -->
+            <div class="about-hero">
+                <h1>Tentang Kami</h1>
+                <p>Kami adalah agensi perjalanan yang berdedikasi untuk menciptakan pengalaman perjalanan yang tak terlupakan bagi setiap pelanggan kami.</p>
+            </div>
+
+            <!-- About Content -->
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Siapa Kami?</h2>
+                    <p>MOOD Travel adalah platform perjalanan terpercaya yang telah melayani ribuan pelanggan dengan profesionalisme dan dedikasi tinggi. Kami memahami bahwa setiap perjalanan adalah momen berharga yang ingin Anda ciptakan bersama orang-orang terkasih.</p>
+                    <p>Dengan pengalaman lebih dari 10 tahun di industri pariwisata, tim kami yang berpengalaman siap membantu Anda merencanakan perjalanan impian Anda dari awal hingga akhir.</p>
+                    <p>Kami percaya bahwa perjalanan bukan hanya tentang destinasi, tetapi tentang pengalaman, koneksi, dan kenangan yang akan bertahan selamanya.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/PT.jpeg" alt="MOOD Travel Team">
+                </div>
+            </div>
+
+            <!-- Mission & Vision -->
+            <div class="mission-vision">
+                <div class="mv-card">
+                    <h3>Misi Kami</h3>
+                    <p>To be malaysia's most trusted premium travel partner by 2035 creating memorable and stress-free journeys that bring people closer through unique and meaningful experiences.</p>
+                </div>
+                <div class="mv-card">
+                    <h3>Visi Kami</h3>
+                    <p>1. Design personalized, flexible, and halal-friendly travel packages for all ages, prioritizing comfort and peace of mind.</p>
+                    <p>2. Deliver exceptional service with integrity and care, making every traveler feel valued.</p>
+                    <p>3. Blend expert knowledge with innovative solutions to inspire exploration and cultural appreciation.</p>
+                    <p>4. Build lasting client relationships through trust and trust, transparency, and genuine hospitality.</p>
+                </div>
+            </div>
+
+            <!-- Values Section -->
+            <div class="values-section">
+                <h2 class="values-title">Nilai-Nilai Kami</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🎯</div>
+                        <h4>Profesionalisme</h4>
+                        <p>Kami menangani setiap detail dengan profesional dan penuh tanggung jawab untuk kepuasan Anda.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h4>Kepercayaan</h4>
+                        <p>Kepercayaan pelanggan adalah aset paling berharga bagi kami. Kami selalu transparan dan jujur.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">❤️</div>
+                        <h4>Passion</h4>
+                        <p>Kami cinta melayani dan mencintai apa yang kami lakukan untuk memberikan yang terbaik.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">💡</div>
+                        <h4>Inovasi</h4>
+                        <p>Kami terus berinovasi untuk memberikan solusi perjalanan yang modern dan efisien.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🌍</div>
+                        <h4>Keberlanjutan</h4>
+                        <p>Kami berkomitmen untuk travel yang bertanggung jawab terhadap lingkungan dan masyarakat lokal.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">✨</div>
+                        <h4>Keunggulan</h4>
+                        <p>Kami selalu berusaha memberikan yang terbaik dalam setiap aspek layanan kami.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements Section -->
+            <div class="achievements">
+                <h2 class="achievements-title">Pencapaian Kami</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-item">
+                        <h3>50K+</h3>
+                        <p>Pelancong Bahagia</p>
+                    </div>
+                    <div class="achievement-item">
+                        <h3>100+</h3>
+                        <p>Destinasi Tersedia</p>
+                    </div>
+                    <div class="achievement-item">
+                        <h3>10+</h3>
+                        <p>Tahun Pengalaman</p>
+                    </div>
+                    <div class="achievement-item">
+                        <h3>99%</h3>
+                        <p>Tingkat Kepuasan</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div class="team-section">
+                <h2 class="team-title">Tim Kami</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <img src="images/customer-profile1.jpg" alt="Sarah Mitchell" class="team-member-image">
+                        <div class="team-member-info">
+                            <div class="team-member-name">Ahmad Ibrahim</div>
+                            <div class="team-member-role">Founder & CEO</div>
+                            <div class="team-member-desc">Pemimpin visioner dengan pengalaman travel 15 tahun</div>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="images/customer-profile2.jpg" alt="James Rossi" class="team-member-image">
+                        <div class="team-member-info">
+                            <div class="team-member-name">Siti Nurhaliza</div>
+                            <div class="team-member-role">Operations Manager</div>
+                            <div class="team-member-desc">Ahli logistik dengan track record sempurna</div>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="images/customer-profile3.jpg" alt="David Chen" class="team-member-image">
+                        <div class="team-member-info">
+                            <div class="team-member-name">Budi Santoso</div>
+                            <div class="team-member-role">Travel Consultant</div>
+                            <div class="team-member-desc">Spesialis destinasi Asia dengan pengetahuan mendalam</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications" style="max-width: 1200px; margin: 80px auto; padding: 0 20px;">
+        <h2 class="section-title">Sertifikasi & Kepercayaan</h2>
+        <p class="section-subtitle">Kami adalah agensi perjalanan bersertifikat dan terpercaya</p>
+        <div class="certifications-grid">
+            <div class="certification-item">
+                <div class="cert-icon">🏢</div>
+                <h4>Suruhanjaya Syarikat Malaysia</h4>
+                <p>Berdaftar dan diakui secara sah</p>
+            </div>
+            <div class="certification-item">
+                <div class="cert-icon">✈️</div>
+                <h4>Industri Pelancongan</h4>
+                <p>Bersertifikat dan berpengalaman</p>
+            </div>
+            <div class="certification-item">
+                <div class="cert-icon">🛡️</div>
+                <h4>Jaminan Keselamatan</h4>
+                <p>Perlindungan lengkap untuk pelancong</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-column footer-logo-column">
+        <img src="images/CLNB2.png" alt="MOOD Travel Logo" class="footer-logo">
+        <p class="footer-tagline">Semuanya Dah Terurus! Baru Lah Ada Mood Nak Travel</p>
+    </div>
+
+    <div class="footer-column">
+        <h4>Syarikat</h4>
+        <ul>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Kerjaya</a></li>
+            <li><a href="#">Penerbitan</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+        <h4>Perkhidmatan</h4>
+        <ul>
+            <li><a href="#">Pakej Pelancongan</a></li>
+            <li><a href="#">Tempahan Khas</a></li>
+            <li><a href="#">Trip Berkumpulan</a></li>
+            <li><a href="#">Insurans Perjalanan</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+        <h4>Sokongan</h4>
+        <ul>
+            <li><a href="#">Pusat Bantuan</a></li>
+            <li><a href="#">Hubungi Kami</a></li>
+            <li><a href="#">Soalan Lazim (FAQ)</a></li>
+            <li><a href="#">Maklum Balas</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 MOOD Travel. Hak Cipta Terpelihara. | Dasar Privasi | Syarat Perkhidmatan</p>
+    </div>
+</footer>
+
+    <script src="js/script.js"></script>
+
+    <script>
+        // Animated cycling text
+        document.addEventListener('DOMContentLoaded', function() {
+            const words = ['Travelers', 'Families', 'Adventurers', 'Explorers', 'Dreamers', 'Couples', 'Solo', 'Women', 'Kids', 'Man', 'YOU'];
+            const cyclingWordDiv = document.querySelector('.cycling-word');
+            let currentIndex = 0;
+
+            function cycleWords() {
+                // Remove current word
+                const existingWords = cyclingWordDiv.querySelectorAll('.word');
+                existingWords.forEach(word => {
+                    word.classList.remove('active');
+                    word.classList.add('exit');
+                    setTimeout(() => word.remove(), 200);
+                });
+
+                // Add next word after fade out
+                setTimeout(() => {
+                    const nextIndex = (currentIndex + 1) % words.length;
+                    const newWord = document.createElement('span');
+                    newWord.className = 'word active';
+                    newWord.textContent = words[nextIndex];
+                    cyclingWordDiv.appendChild(newWord);
+                    currentIndex = nextIndex;
+
+                    // Stop at last word (YOU)
+                    if (nextIndex !== words.length - 1) {
+                        setTimeout(cycleWords, 500);
+                    }
+                }, 200);
+            }
+
+            // Start cycling after 2 seconds (when word appears)
+            setTimeout(cycleWords, 2000);
+        });
+    </script>
+</body>
+</html>

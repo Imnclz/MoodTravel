@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pilih Negara - MOOD Travel</title>
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+            /* minimal page-specific styles kept simple */
+            .packages-page{min-height:100vh;padding-top:120px;padding-bottom:60px}
+            .package-hero{text-align:center;margin-bottom:40px}
+            .package-hero h1{color:var(--primary-red);font-size:48px;margin:0}
+            .package-hero p{color:var(--text-light);max-width:800px;margin:8px auto 0}
+
+            /* Back button */
+            .back-button{display:inline-flex;align-items:center;gap:8px;color:var(--primary-red);text-decoration:none;font-weight:600;margin-bottom:20px;padding:6px 10px;border-radius:8px;border:2px solid rgba(255,45,45,0.08);transition:all .2s}
+            .back-button::before{content:"←";font-size:18px}
+            .back-button:hover{background:rgba(255,45,45,0.06);transform:translateY(-2px)}
+
+            /* Destinations grid and title */
+            .destinations-title{text-align:center;font-size:36px;color:var(--primary-red);margin-bottom:20px;font-weight:700}
+            .destinations-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1200px;margin:0 auto}
+            .destination-card{text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+            .destination-card-image{width:100%;height:180px;object-fit:cover}
+            .destination-card-content{padding:14px;text-align:center}
+            .destination-card-country{font-weight:700;color:var(--primary-red);text-transform:uppercase;margin-bottom:6px}
+            .destination-card-cta{display:inline-block;margin-top:8px;padding:8px 12px;border-radius:8px;background:linear-gradient(135deg,var(--primary-red),var(--accent-dark));color:#fff;font-weight:700}
+            @media(max-width:768px){.destinations-grid{grid-template-columns:repeat(2,1fr)}.package-hero h1{font-size:36px}}
+            @media(max-width:480px){.destinations-grid{grid-template-columns:1fr}}
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo"><img src="images/CLNB2.png" alt="MOOD TRAVEL Logo" class="logo-img"></div>
+                <div class="nav-menu-wrapper">
+                    <ul class="nav-links">
+                        <li><a href="index.html#utama">Utama</a></li>
+                        <li><a href="index.html#package">Pakej</a></li>
+                        <li><a href="pengalaman.html">Pengalaman</a></li>
+                        <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                        <li><a href="hubungi.html">Hubungi</a></li>
+                    </ul>
+                    <button class="nav-cta">Tempah Sekarang</button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="packages-page">
+            <section class="package-detail-section">
+                <a href="index.html#package" class="back-button">Kembali ke Utama</a>
+                <div class="package-hero">
+                    <h1>PILIH NEGARA</h1>
+                    <p>Pilih negara yang anda mahu lawati — klik kad untuk buka halaman negara.</p>
+                </div>
+
+                <section class="destinations-section">
+                    <h2 class="destinations-title">Negara</h2>
+                    <div class="destinations-grid">
+                        <a class="destination-card" href="indonesia.html">
+                            <img class="destination-card-image" src="images/IF.jpg" alt="Indonesia">
+                            <div class="destination-card-content">
+                                <div class="destination-card-country">Indonesia</div>
+                                <div class="destination-card-description">Nikmati kekayaan budaya dan alam Indonesia.</div>
+                                <div class="destination-card-cta">Buka</div>
+                            </div>
+                        </a>
+
+                        <a class="destination-card" href="japan.html">
+                            <img class="destination-card-image" src="images/JF.jpg" alt="Japan">
+                            <div class="destination-card-content">
+                                <div class="destination-card-country">Japan</div>
+                                <div class="destination-card-description">Rasakan tradisi dan modernitas Jepun.</div>
+                                <div class="destination-card-cta">Buka</div>
+                            </div>
+                        </a>
+
+                        <a class="destination-card" href="Korea.html">
+                            <img class="destination-card-image" src="images/KF.jpg" alt="South Korea">
+                            <div class="destination-card-content">
+                                <div class="destination-card-country">South Korea</div>
+                                <div class="destination-card-description">Trip eksklusif ke Korea Selatan.</div>
+                                <div class="destination-card-cta">Buka</div>
+                            </div>
+                        </a>
+
+                        <a class="destination-card" href="vietnam.html">
+                            <img class="destination-card-image" src="images/VF.jpg" alt="Vietnam">
+                            <div class="destination-card-content">
+                                <div class="destination-card-country">Vietnam</div>
+                                <div class="destination-card-description">Jelajahi pesona Vietnam bersama kami.</div>
+                                <div class="destination-card-cta">Buka</div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-column footer-logo-column">
+                <img src="images/CLNB2.png" alt="MOOD Travel Logo" class="footer-logo">
+                <p class="footer-tagline">Semuanya Dah Terurus! Baru Lah Ada Mood Nak Travel</p>
+            </div>
+            <div class="footer-column">
+                <h4>Syarikat</h4>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Kerjaya</a></li>
+                    <li><a href="#">Penerbitan</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Perkhidmatan</h4>
+                <ul>
+                    <li><a href="#">Pakej Pelancongan</a></li>
+                    <li><a href="#">Tempahan Khas</a></li>
+                    <li><a href="#">Trip Berkumpulan</a></li>
+                    <li><a href="#">Insurans Perjalanan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Sokongan</h4>
+                <ul>
+                    <li><a href="#">Pusat Bantuan</a></li>
+                    <li><a href="#">Hubungi Kami</a></li>
+                    <li><a href="#">Soalan Lazim (FAQ)</a></li>
+                    <li><a href="#">Maklum Balas</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MOOD Travel. Hak Cipta Terpelihara.</p>
+            </div>
+        </footer>
+
+        <script>
+            // Intentionally minimal — links are regular anchors to existing pages.
+        </script>
+    </body>
+    </html>
